@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>四升五暑假学习工作台 · 林老师</title>
+<meta name="og:title" content="四升五暑假学习工作台 · 林老师">
+<meta name="og:description" content="人教版四升五暑假学习：语文古诗、数学口算、英语单词，30 天打卡解锁，完成任务得积分兑换奖励。">
+<link rel="stylesheet" href="assets/theme.css?v=2">
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===== 顶部标签导航 ===== -->
+  <nav class="tabs" id="tabs">
+    <button data-tab="home" class="active"><span class="ic">🏠</span>首页</button>
+    <button data-tab="chinese"><span class="ic">📖</span>语文</button>
+    <button data-tab="math"><span class="ic">➗</span>数学</button>
+    <button data-tab="english"><span class="ic">🔤</span>英语</button>
+    <button data-tab="calendar"><span class="ic">📅</span>日历</button>
+    <button data-tab="reward"><span class="ic">🎁</span>奖励</button>
+    <button data-tab="settings"><span class="ic">⚙️</span>设置</button>
+  </nav>
+
+  <!-- ============ 首页 ============ -->
+  <section class="panel active" id="panel-home">
+    <div class="hero">
+      <div class="avatar">🦊</div>
+      <h1>欢迎回来，小学霸！</h1>
+      <div class="sub" id="heroDate">今天是充实暑假的一天</div>
+      <div class="stats">
+        <div class="stat"><div class="n" id="stDay">第 1 天</div><div class="l">学习进度</div></div>
+        <div class="stat"><div class="n" id="stPoint">0</div><div class="l">总积分</div></div>
+        <div class="stat"><div class="n" id="stStreak">0</div><div class="l">连续天数</div></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3>📊 今日完成度</h3>
+      <div class="prog">
+        <div class="ring" id="ring"><div class="rt"><b id="ringP">0%</b><span>打卡进度</span></div></div>
+        <div class="bars">
+          <div class="bar" id="bar-chinese"><div class="top"><span>📖 语文</span><b>0%</b></div><div class="track"><div class="fill" style="width:0%"></div></div></div>
+          <div class="bar" id="bar-math"><div class="top"><span>➗ 数学</span><b>0%</b></div><div class="track"><div class="fill" style="width:0%"></div></div></div>
+          <div class="bar" id="bar-english"><div class="top"><span>🔤 英语</span><b>0%</b></div><div class="track"><div class="fill" style="width:0%"></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-t">✅ 今日学习任务</div>
+    <div class="taskcard" data-go="chinese"><div class="em yw">📖</div><div class="tx"><b>语文 · 每日古诗</b><span>背一首诗，积累语感</span></div><div class="st no" id="go-chinese">未完成</div></div>
+    <div class="taskcard" data-go="math"><div class="em sx">➗</div><div class="tx"><b>数学 · 口算+每日一题</b><span>口算打卡 + 思考题</span></div><div class="st no" id="go-math">未完成</div></div>
+    <div class="taskcard" data-go="english"><div class="em yy">🔤</div><div class="tx"><b>英语 · 每日单词</b><span>听读背，积累词汇</span></div><div class="st no" id="go-english">未完成</div></div>
+  </section>
+
+  <!-- ============ 语文 ============ -->
+  <section class="panel" id="panel-chinese">
+    <div class="poem" id="poem"></div>
+    <div style="display:flex;gap:8px;margin:12px 0;">
+      <button class="linkbtn" id="pyToggle">🙈 隐藏拼音</button>
+      <button class="linkbtn" id="noteToggle">💡 看注释</button>
+    </div>
+    <button class="btn full orange" id="poemDone">✓ 我已经背熟啦</button>
+    <p class="small" style="text-align:center;margin-top:8px;">背熟即打卡，+10 积分</p>
+  </section>
+
+  <!-- ============ 数学 ============ -->
+  <section class="panel" id="panel-math">
+    <div class="card">
+      <h3>🧮 口算练习</h3>
+      <div class="timer"><span class="t" id="drillT">15:00</span><button class="btn ghost" id="drillStart" style="padding:8px 14px;">开始计时</button><button class="btn ghost" id="drillReset" style="padding:8px 14px;">重置</button></div>
+      <div style="display:flex;gap:8px;margin:8px 0;">
+        <button class="btn ghost" id="drillGen" style="flex:1;">🔄 换一批</button>
+        <button class="btn" id="drillCheck" style="flex:1;">✓ 批改</button>
+      </div>
+      <div class="drill" id="drill"></div>
+      <div class="score" id="drillScore"></div>
+      <button class="btn full green" id="drillDone" style="margin-top:10px;">✓ 完成口算打卡</button>
+    </div>
+
+    <div class="section-t">🧠 每日一题</div>
+    <div class="qcard" id="dailyQ"></div>
+    <button class="btn full green" id="dailyDone" style="margin-top:10px;">✓ 完成每日一题</button>
+  </section>
+
+  <!-- ============ 英语 ============ -->
+  <section class="panel" id="panel-english">
+    <div class="card">
+      <h3 id="wTitle">🔤 每日单词（10 个）</h3>
+      <p class="small" style="margin:0 0 10px;">点 🔊 听发音，点卡片标记已背；全部背完即可打卡。</p>
+      <div class="wlist" id="wlist"></div>
+    </div>
+    <button class="btn full" id="wordDone" style="margin-top:4px;">✓ 单词打卡 +10</button>
+  </section>
+
+  <!-- ============ 日历 ============ -->
+  <section class="panel" id="panel-calendar">
+    <div class="card">
+      <h3>📅 暑假打卡日历</h3>
+      <p class="small" id="calInfo" style="margin:0 0 12px;">第 1 天</p>
+      <div class="calendar" id="calendar"></div>
+      <p class="small" style="margin:12px 2px 0;">✅ 已完成 · 🟦 今天（进行中） · 🔒 未解锁（先完成今天）</p>
+    </div>
+  </section>
+
+  <!-- ============ 设置 ============ -->
+  <section class="panel" id="panel-settings">
+    <div class="card">
+      <h3>⚙️ 自定义任务</h3>
+      <p class="small" style="margin:0 0 12px;">开启 / 关闭模块、调节题量；家长可据此定制孩子的暑假计划。</p>
+      <div class="set-row"><label><input type="checkbox" id="setChinese"> 语文 · 每日古诗</label></div>
+      <div class="set-row"><label><input type="checkbox" id="setDrill"> 数学 · 口算练习</label></div>
+      <div class="set-row"><label><input type="checkbox" id="setDaily"> 数学 · 每日一题</label></div>
+      <div class="set-row"><label><input type="checkbox" id="setEnglish"> 英语 · 每日单词</label></div>
+      <div class="set-row"><span>口算题量</span><input type="number" id="setDrillNum" min="5" max="30" value="10"></div>
+      <div class="set-row"><span>每日单词数</span><input type="number" id="setWordNum" min="5" max="30" value="10"></div>
+      <div class="set-row"><span>英文时长(分钟)</span><input type="number" id="setDuration" min="5" max="60" value="30"></div>
+      <div class="set-row"><span>起始日</span><input type="date" id="setStart" value="2026-07-01"></div>
+      <div class="set-row"><span>总天数</span>
+        <select id="setTotal"><option value="5">5 天</option><option value="10">10 天</option><option value="15">15 天</option><option value="20">20 天</option><option value="30" selected>30 天</option><option value="40">40 天</option><option value="60">60 天</option></select>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:14px;">
+        <button class="btn full green" id="setSave" style="flex:1;">💾 保存设置</button>
+        <button class="btn ghost" id="setReset" style="flex:1;">恢复默认</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 奖励 ============ -->
+  <section class="panel" id="panel-reward">
+    <div class="reward-hero">
+      <div class="coin">🪙</div>
+      <div><div class="n" id="coinNum">0</div><div class="l">我的金币</div></div>
+    </div>
+
+    <div class="section-t">🛍️ 积分商城</div>
+    <div class="mall" id="mall"></div>
+
+    <div class="section-t">🎫 我的兑换券</div>
+    <div id="coupons"><p class="small" style="margin:4px 2px;">还没有兑换奖励，去上面挑一个吧！</p></div>
+
+    <div class="section-t">🏅 徽章墙</div>
+    <div class="badges" id="badges"></div>
+
+    <div class="card" style="margin-top:16px;text-align:center;">
+      <div style="font-weight:800;margin-bottom:6px;">📲 想要专属定制版？</div>
+      <p class="small" style="margin:0 0 10px;">加林老师微信，领取完整暑假计划 / 定制你的专属题目。</p>
+      <img src="../assets/wechat-qr.png" alt="微信二维码" style="width:120px;border-radius:12px;">
+      <div class="muted" style="margin-top:8px;font-size:13px;">电话 177-6346-1806</div>
+    </div>
+  </section>
+
+  <div class="foot">林老师 · 四升五暑假学习工作台（免费福利版）<br>© 2026 林老师</div>
+</div>
+
+<!-- 兑换确认弹窗 -->
+<div class="modal" id="modal">
+  <div class="box">
+    <h3 id="mTitle">兑换奖励</h3>
+    <p id="mText">确定兑换吗？</p>
+    <button class="btn orange full" id="mOk">确定兑换</button>
+    <button class="btn ghost full" id="mCancel" style="margin-top:8px;">再想想</button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="assets/data.js?v=3"></script>
+<script src="assets/app.js?v=3"></script>
+</body>
+</html>

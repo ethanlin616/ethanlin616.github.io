@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>初中物理学习工作台 · 中考总复习 · 林老师</title>
+<meta name="og:title" content="初中物理学习工作台 · 中考总复习 · 林老师">
+<meta name="og:description" content="人教版初中物理中考总复习：知识点+公式卡、每日一练自动批改、实验探究，30 天打卡解锁，积分兑换奖励。">
+<link rel="stylesheet" href="assets/theme.css?v=1">
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===== 顶部标签导航 ===== -->
+  <nav class="tabs" id="tabs">
+    <button data-tab="home" class="active"><span class="ic">🏠</span>首页</button>
+    <button data-tab="know"><span class="ic">📘</span>知识</button>
+    <button data-tab="quiz"><span class="ic">📝</span>练习</button>
+    <button data-tab="exp"><span class="ic">🔬</span>实验</button>
+    <button data-tab="wrong"><span class="ic">📕</span>错题<span class="tbadge" id="wBadge"></span></button>
+    <button data-tab="calendar"><span class="ic">📅</span>日历</button>
+    <button data-tab="reward"><span class="ic">🎁</span>奖励</button>
+    <button data-tab="settings"><span class="ic">⚙️</span>设置</button>
+  </nav>
+
+  <!-- ============ 首页 ============ -->
+  <section class="panel active" id="panel-home">
+    <div class="hero">
+      <div class="avatar">🔭</div>
+      <h1>欢迎回来，小物理学家！</h1>
+      <div class="sub" id="heroDate">开始你的中考物理冲刺</div>
+      <div class="stats">
+        <div class="stat"><div class="n" id="stDay">第 1 天</div><div class="l">学习进度</div></div>
+        <div class="stat"><div class="n" id="stPoint">0</div><div class="l">总积分</div></div>
+        <div class="stat"><div class="n" id="stStreak">0</div><div class="l">连续天数</div></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3>📊 今日完成度</h3>
+      <div class="prog">
+        <div class="ring" id="ring"><div class="rt"><b id="ringP">0%</b><span>打卡进度</span></div></div>
+        <div class="bars">
+          <div class="bar" id="bar-know"><div class="top"><span>📘 知识</span><b>0%</b></div><div class="track"><div class="fill" style="width:0%"></div></div></div>
+          <div class="bar" id="bar-quiz"><div class="top"><span>📝 练习</span><b>0%</b></div><div class="track"><div class="fill" style="width:0%"></div></div></div>
+          <div class="bar" id="bar-exp"><div class="top"><span>🔬 实验</span><b>0%</b></div><div class="track"><div class="fill" style="width:0%"></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-t">✅ 今日学习任务</div>
+    <div class="taskcard" data-go="know"><div class="em">📘</div><div class="tx"><b>知识 · 知识点+公式卡</b><span>掌握当天考点与核心公式</span></div><div class="st no" id="go-know">未完成</div></div>
+    <div class="taskcard" data-go="quiz"><div class="em">📝</div><div class="tx"><b>练习 · 每日一练</b><span>选择题+计算题，自动批改</span></div><div class="st no" id="go-quiz">未完成</div></div>
+    <div class="taskcard" data-go="exp"><div class="em">🔬</div><div class="tx"><b>实验 · 实验探究</b><span>重点实验/易错辨析</span></div><div class="st no" id="go-exp">未完成</div></div>
+  </section>
+
+  <!-- ============ 知识 ============ -->
+  <section class="panel" id="panel-know">
+    <div class="know" id="know"></div>
+    <div style="display:flex;gap:8px;margin:12px 0;">
+      <button class="linkbtn" id="fToggle">🙈 隐藏公式</button>
+    </div>
+    <button class="btn full green" id="knowDone">✓ 我掌握了，打卡 +10</button>
+    <p class="small" style="text-align:center;margin-top:8px;">掌握当天知识点即可打卡</p>
+  </section>
+
+  <!-- ============ 练习 ============ -->
+  <section class="panel" id="panel-quiz">
+    <div id="qList"></div>
+    <button class="btn full" id="qCheck" style="margin-top:4px;">✓ 批改</button>
+    <button class="btn full green" id="quizDone" style="margin-top:10px;">✓ 完成练习打卡 +10</button>
+    <p class="small" style="text-align:center;margin-top:8px;">提交批改后绿对红错，全对额外 +5</p>
+  </section>
+
+  <!-- ============ 实验 ============ -->
+  <section class="panel" id="panel-exp">
+    <div class="exp" id="exp"></div>
+    <button class="btn full green" id="expDone" style="margin-top:12px;">✓ 完成实验打卡 +10</button>
+  </section>
+
+  <!-- ============ 错题本 ============ -->
+  <section class="panel" id="panel-wrong">
+    <div class="wrong" id="wrong"></div>
+  </section>
+
+  <!-- ============ 日历 ============ -->
+  <section class="panel" id="panel-calendar">
+    <div class="card">
+      <h3>📅 中考复习打卡日历</h3>
+      <p class="small" id="calInfo" style="margin:0 0 12px;">第 1 天</p>
+      <div class="calendar" id="calendar"></div>
+      <p class="small" style="margin:12px 2px 0;">✅ 已完成 · 🟦 今天（进行中） · 🔒 未解锁（先完成今天）</p>
+    </div>
+  </section>
+
+  <!-- ============ 设置 ============ -->
+  <section class="panel" id="panel-settings">
+    <div class="card">
+      <h3>⚙️ 自定义任务</h3>
+      <p class="small" style="margin:0 0 12px;">开启 / 关闭模块、调节练习题量；家长可据此定制孩子的复习计划。</p>
+      <div class="set-row"><label><input type="checkbox" id="setKnow"> 知识 · 知识点+公式卡</label></div>
+      <div class="set-row"><label><input type="checkbox" id="setQuiz"> 练习 · 每日一练</label></div>
+      <div class="set-row"><label><input type="checkbox" id="setExp"> 实验 · 实验探究</label></div>
+      <div class="set-row"><span>每日题量（选择+计算）</span><input type="number" id="setQuizNum" min="3" max="8" value="5"></div>
+      <div class="set-row"><span>起始日</span><input type="date" id="setStart" value="2026-07-01"></div>
+      <div class="set-row"><span>总天数</span>
+        <select id="setTotal"><option value="5">5 天</option><option value="10">10 天</option><option value="15">15 天</option><option value="20">20 天</option><option value="30" selected>30 天</option><option value="40">40 天</option><option value="60">60 天</option></select>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:14px;">
+        <button class="btn full green" id="setSave" style="flex:1;">💾 保存设置</button>
+        <button class="btn ghost" id="setReset" style="flex:1;">恢复默认</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 奖励 ============ -->
+  <section class="panel" id="panel-reward">
+    <div class="reward-hero">
+      <div class="coin">🪙</div>
+      <div><div class="n" id="coinNum">0</div><div class="l">我的金币</div></div>
+    </div>
+
+    <div class="section-t">🛍️ 积分商城</div>
+    <div class="mall" id="mall"></div>
+
+    <div class="section-t">🎫 我的兑换券</div>
+    <div id="coupons"><p class="small" style="margin:4px 2px;">还没有兑换奖励，去上面挑一个吧！</p></div>
+
+    <div class="section-t">🏅 徽章墙</div>
+    <div class="badges" id="badges"></div>
+
+    <div class="card" style="margin-top:16px;text-align:center;">
+      <div style="font-weight:800;margin-bottom:6px;">📲 想要专属定制版？</div>
+      <p class="small" style="margin:0 0 10px;">加林老师微信，领取完整中考复习计划 / 定制你的专属题目。</p>
+      <img src="../assets/wechat-qr.png" alt="微信二维码" style="width:120px;border-radius:12px;">
+      <div class="muted" style="margin-top:8px;font-size:13px;">电话 177-6346-1806</div>
+    </div>
+  </section>
+
+  <div class="foot">林老师 · 初中物理学习工作台（免费福利版）<br>© 2026 林老师</div>
+</div>
+
+<!-- 兑换确认弹窗 -->
+<div class="modal" id="modal">
+  <div class="box">
+    <h3 id="mTitle">兑换奖励</h3>
+    <p id="mText">确定兑换吗？</p>
+    <button class="btn orange full" id="mOk">确定兑换</button>
+    <button class="btn ghost full" id="mCancel" style="margin-top:8px;">再想想</button>
+  </div>
+</div>
+<!-- 清空错题确认弹窗（页面内弹窗，兼容 iframe 预览，替代原生 confirm） -->
+<div class="modal" id="cModal">
+  <div class="box">
+    <h3 id="cTitle">清空错题本</h3>
+    <p id="cText">确定清空错题本吗？已掌握的题目和记录都会被删除，此操作不可恢复。</p>
+    <button class="btn red full" id="cOk">确定清空</button>
+    <button class="btn ghost full" id="cCancel" style="margin-top:8px;">再想想</button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="assets/data.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>
