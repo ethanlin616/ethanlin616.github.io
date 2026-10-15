@@ -200,9 +200,10 @@ def build_subject(key):
     qr_src = ASSETS / f"qr-{key}.png"
     if qr_src.exists():
         shutil.copy2(qr_src, outdir / "qr.png")
-    cover_src = ASSETS / cfg["cover"]
-    if cover_src.exists():
-        shutil.copy2(cover_src, outdir / cfg["cover"])
+    for fn in [cfg["cover"], "favicon.png"]:
+        src = ASSETS / fn
+        if src.exists():
+            shutil.copy2(src, outdir / fn)
     print(f"[ok] {key}: {outdir/'index.html'} ({len(html)} bytes)")
 
 

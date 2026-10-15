@@ -13,6 +13,8 @@
 <meta property="og:url" content="$canonical">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <style>$css</style>
 </head>
 <body>
@@ -112,13 +114,13 @@
 (function(){
   var tabs=document.querySelectorAll('.tab');
   var panels=document.querySelectorAll('.tabpanel');
-  tabs.forEach(function(t){
+  Array.prototype.forEach.call(tabs,function(t){
     t.addEventListener('click',function(){
-      tabs.forEach(function(x){x.classList.remove('on')});
-      panels.forEach(function(p){p.classList.remove('on')});
-      t.classList.add('on');
-      var el=document.getElementById('panel-'+t.dataset.tab);
-      if(el) el.classList.add('on');
+      Array.prototype.forEach.call(tabs,function(x){x.className='tab'});
+      Array.prototype.forEach.call(panels,function(p){p.className='tabpanel'});
+      t.className='tab on';
+      var el=document.getElementById('panel-'+t.getAttribute('data-tab'));
+      if(el) el.className='tabpanel on';
     });
   });
 })();
