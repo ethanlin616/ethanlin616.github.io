@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>北京初中物理 · 高中物理一对一辅导 | 林老师</title>
+<meta name="description" content="北京初中物理、高中物理一对一辅导。专攻受力分析、欧姆定律与电功率、牛顿定律与能量动量、电磁感应综合题。先诊断后上课，每次课后有反馈。">
+<link rel="canonical" href="https://ethanlin616.github.io/physics/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="北京初中物理 · 高中物理一对一辅导 | 林老师">
+<meta property="og:description" content="北京初中物理、高中物理一对一辅导。专攻受力分析、欧姆定律与电功率、牛顿定律与能量动量、电磁感应综合题。先诊断后上课，每次课后有反馈。">
+<meta property="og:image" content="https://ethanlin616.github.io/physics/cover-physics.png">
+<meta property="og:url" content="https://ethanlin616.github.io/physics/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="format-detection" content="telephone=no">
+<style>:root{
+  --c1:#1E3A8A; --c2:#2563EB; --c3:#0EA5E9; --accent:#F97316;
+  --ink:#1F2937; --ink2:#4B5563; --ink3:#8A929E;
+  --line:#E8EDF3; --soft:#F4F8FE;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:"STHeiti Medium","Heiti SC","PingFang SC","Microsoft YaHei",-apple-system,sans-serif;
+  color:var(--ink); background:#F2F5F9; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:720px;margin:0 auto;background:#fff;box-shadow:0 2px 24px rgba(30,58,138,.08)}
+
+/* topbar */
+.topbar{background:#fff;border-bottom:1px solid var(--line);padding:10px 18px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:20}
+.topbar .brand{font-size:15px;font-weight:800;color:var(--c1)}
+.topbar .brand small{display:block;font-size:10px;font-weight:400;color:var(--ink3);letter-spacing:.5px}
+.subj-nav{display:flex;gap:6px}
+.subj-nav a{font-size:12px;padding:4px 10px;border-radius:14px;background:var(--soft);color:var(--ink2);font-weight:600}
+.subj-nav a.on{background:var(--c2);color:#fff}
+
+/* hero */
+.hero{background:linear-gradient(135deg,var(--c1) 0%,var(--c2) 60%,var(--c3) 100%);color:#fff;padding:32px 22px 26px}
+.hero .kicker{display:inline-block;background:rgba(255,255,255,.18);border-radius:16px;padding:4px 14px;font-size:11px;letter-spacing:1px}
+.hero h1{font-size:26px;font-weight:800;line-height:1.3;margin:12px 0 8px}
+.hero .sub{font-size:14px;opacity:.95;font-weight:600}
+.hero .chips{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.hero .chips span{background:rgba(255,255,255,.16);border-radius:6px;padding:4px 10px;font-size:11.5px}
+
+/* section */
+.sec{padding:26px 22px;border-bottom:1px solid var(--line)}
+.sec-title{font-size:17px;font-weight:800;color:var(--c1);margin-bottom:6px;display:flex;align-items:center;gap:7px}
+.sec-sub{font-size:12.5px;color:var(--ink3);margin-bottom:16px}
+
+/* pain cards */
+.pain{display:flex;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.pain:last-child{border-bottom:none}
+.pain .no{flex:0 0 24px;height:24px;border-radius:50%;background:var(--soft);color:var(--c2);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.pain .t{font-size:14.5px;font-weight:700}
+.pain .d{font-size:12.5px;color:var(--ink2);margin-top:2px}
+
+/* methods */
+.method{background:var(--soft);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.method .t{font-size:14.5px;font-weight:800;color:var(--c1)}
+.method .d{font-size:12.5px;color:var(--ink2);margin-top:4px}
+
+/* tabs */
+.tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tab{padding:7px 16px;border-radius:20px;background:var(--soft);color:var(--ink2);font-size:13.5px;font-weight:700;cursor:pointer;border:none;font-family:inherit}
+.tab.on{background:linear-gradient(135deg,var(--c2),var(--c3));color:#fff}
+.tabpanel{display:none}
+.tabpanel.on{display:block}
+.tabnote{font-size:12px;color:var(--ink3);margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{background:#F2F5F9;color:#4B5563;padding:5px 10px;border-radius:6px;font-size:12.5px}
+
+/* price table */
+.ptable{width:100%;border-collapse:collapse}
+.ptable th{text-align:left;font-size:11.5px;color:var(--ink3);font-weight:500;padding:6px 0;border-bottom:1px solid var(--line)}
+.ptable td{padding:11px 0;border-bottom:1px solid #F4F7FA;font-size:13.5px;vertical-align:middle}
+.ptable tr:last-child td{border-bottom:none}
+.ptable .nm{font-weight:700}
+.ptable .ds{font-size:11px;color:var(--ink3);margin-top:2px}
+.ptable .pr{text-align:right;font-weight:800;color:#E2561B;white-space:nowrap}
+.ptable .pr small{font-size:10px;color:var(--ink3);font-weight:400}
+.trialbox{margin-top:14px;background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;border-radius:12px;padding:16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.trialbox .lb{font-size:13px;font-weight:700}
+.trialbox .lb em{font-style:normal;font-size:11px;opacity:.85;display:block;font-weight:400;margin-top:2px}
+.trialbox .vals{display:flex;gap:10px;flex-wrap:wrap}
+.trialbox .v{background:rgba(255,255,255,.16);border-radius:8px;padding:6px 12px;text-align:center;min-width:78px}
+.trialbox .v b{font-size:18px;font-weight:900;display:block}
+.trialbox .v i{font-style:normal;font-size:10.5px;opacity:.9}
+.note{font-size:11.5px;color:var(--ink3);margin-top:10px}
+
+/* cases */
+.case{background:var(--soft);border-radius:12px;padding:16px;margin-bottom:10px}
+.case .g{font-size:13px;font-weight:800;color:var(--c1)}
+.case .p{font-size:12.5px;color:var(--ink2);margin:6px 0 10px}
+.case .nums{display:flex;gap:10px;margin-bottom:8px}
+.case .nums div{flex:1;background:#fff;border-radius:8px;padding:8px;text-align:center}
+.case .nums .k{font-size:10.5px;color:var(--ink3)}
+.case .nums .v{font-size:17px;font-weight:900;color:var(--c1)}
+.case .nums .v.up{color:#E2561B}
+.case .r{font-size:12.5px;color:var(--ink2)}
+
+/* creds */
+.creds{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.creds div{background:var(--soft);border-radius:10px;padding:10px 12px;font-size:12.5px}
+.honor{font-size:13px;padding:8px 0;border-bottom:1px solid var(--line);display:flex;gap:8px;align-items:flex-start}
+.honor:last-child{border-bottom:none}
+.honor .dot{color:var(--accent);font-weight:800}
+
+/* faq */
+details{background:var(--soft);border-radius:10px;margin-bottom:8px;overflow:hidden}
+summary{padding:13px 16px;font-size:13.5px;font-weight:700;cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--c2);font-weight:800}
+details[open] summary::after{content:"−"}
+details .a{padding:0 16px 14px;font-size:12.5px;color:var(--ink2)}
+
+/* cta */
+.cta{background:linear-gradient(135deg,var(--c1) 0%,var(--c2) 60%,var(--c3) 100%);color:#fff;padding:26px 22px;text-align:center}
+.cta h2{font-size:19px;font-weight:800}
+.cta p{font-size:13px;opacity:.95;margin-top:6px}
+.qrbox{width:160px;margin:16px auto 0;background:#fff;border-radius:12px;padding:8px}
+.qrbox img{width:100%;border-radius:6px}
+.cta .cap{font-size:12.5px;font-weight:700;margin-top:10px}
+.phone{display:inline-block;margin-top:12px;background:var(--accent);color:#fff;font-size:16px;font-weight:800;padding:9px 26px;border-radius:24px;letter-spacing:.5px}
+.cta .psub{font-size:11.5px;opacity:.9;margin-top:8px}
+
+/* cross links */
+.cross{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-top:6px}
+.cross a{background:var(--soft);border-radius:10px;padding:12px 8px;text-align:center}
+.cross a b{display:block;font-size:14px;color:var(--c1)}
+.cross a i{font-style:normal;font-size:11px;color:var(--ink3)}
+
+/* footer */
+.foot{padding:18px 22px 26px;text-align:center;font-size:11px;color:var(--ink3);line-height:1.8}
+.foot a{color:var(--c2)}
+
+@media(max-width:400px){
+  .hero h1{font-size:22px}
+  .creds{grid-template-columns:1fr}
+  .cross{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brand">林老师<small>北京一对一提分</small></div>
+    <div class="subj-nav">
+      <a href="/">主页</a>
+<a class="" href="/math/">数学</a>
+<a class="on" href="/physics/">物理</a>
+<a class="" href="/chemistry/">化学</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <span class="kicker">物理专页</span>
+    <h1>初中物理 · 高中物理</h1>
+    <div class="sub">不靠背公式——先把过程分析清楚，再选规律列式，实验题按踩分点写全</div>
+    <div class="chips">
+      <span>清华大学 3 年联合培养 · 硕士</span>
+<span>4 年一线提分经验</span>
+<span>累计辅导 50+ 名学生</span>
+<span>家长续费率 90%</span>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">🎯 这个科目，孩子常卡在这些地方</div>
+    <div class="sec-sub">以下都是我课堂上真实遇到的高频问题</div>
+    <div class="pain"><div class="no">1</div><div><div class="t">公式听得懂，做题就卡壳</div><div class="d">背了一堆公式，看到题不知道用哪个，硬套公式解出来也不对。</div></div></div>
+<div class="pain"><div class="no">2</div><div><div class="t">受力分析画不对</div><div class="d">漏力、多力、方向搞错，后面的列式全错，力学题一错到底。</div></div></div>
+<div class="pain"><div class="no">3</div><div><div class="t">电学综合题无从下手</div><div class="d">电路图看不懂串并联，欧姆定律和电功率搅在一起，滑动变阻器的动态分析总错。</div></div></div>
+<div class="pain"><div class="no">4</div><div><div class="t">实验探究题写不全</div><div class="d">知道大概意思，但目的、步骤、现象、结论写不全，被扣掉大半分。</div></div></div>
+<div class="pain"><div class="no">5</div><div><div class="t">高中多过程题建模困难</div><div class="d">高中从单一过程变成多过程综合，牛二、能量、动量不知道该选谁，电磁场题更是无从下手。</div></div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">🧩 我怎么教</div>
+    <div class="sec-sub">不是多讲几道题，是给一套能复用的方法</div>
+    <div class="method"><div class="t">1. 过程分析四步</div><div class="d">定研究对象 → 画受力图 / 电路图 → 选规律（牛二、动能定理、动量守恒、欧姆定律）→ 列式后做量纲检查。四步走完再动笔，杜绝凭感觉套公式。</div></div>
+<div class="method"><div class="t">2. 模型化归类</div><div class="d">斜面、连接体、传送带、板块、平抛、圆周运动、带电粒子在复合场——每个模型配一套标准解法，见到题先认模型。</div></div>
+<div class="method"><div class="t">3. 先图后式再代入</div><div class="d">先有过程图，再有物理方程，最后才代数字。数字代入前先化简，能少错一半。</div></div>
+<div class="method"><div class="t">4. 实验题三段式</div><div class="d">目的 → 现象与数据 → 结论，操作、现象、结论三对应，用教材术语写，踩分点一个不漏。</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">📚 物理课程体系</div>
+    <div class="sec-sub">按学段看完整模块，点上方标签切换</div>
+    <div class="tabs"><button class="tab on" data-tab="junior">初中</button>
+<button class="tab" data-tab="senior">高中</button></div>
+    <div class="tabpanel on" id="panel-junior"><div class="tabnote">八至九年级 · 同步提升 / 中考冲刺</div><div class="tags"><span>机械运动与测量</span><span>质量与密度</span><span>力与运动</span><span>压强与浮力</span><span>简单机械与功</span><span>内能与热机</span><span>光的反射与折射</span><span>透镜成像</span><span>电流与电路</span><span>欧姆定律</span><span>电功率</span><span>电与磁</span><span>实验探究专题</span></div></div>
+<div class="tabpanel" id="panel-senior"><div class="tabnote">高一至高三 · 同步提升 / 高考冲刺</div><div class="tags"><span>运动的描述</span><span>匀变速直线运动</span><span>相互作用与受力分析</span><span>牛顿运动定律</span><span>曲线运动与平抛</span><span>圆周运动与万有引力</span><span>功和能 · 动能定理</span><span>动量与碰撞</span><span>静电场</span><span>恒定电流与电路分析</span><span>磁场与安培力</span><span>电磁感应</span><span>交变电流</span><span>振动与波</span><span>力学 / 电磁综合大题</span></div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">💰 物理课程定价</div>
+    <div class="sec-sub">公开透明，1 课时 = 60 分钟</div>
+    <table class="ptable"><tr><th style="width:52%">课程</th><th style="width:18%">形式</th><th style="width:30%;text-align:right">价格</th></tr><tr><td><div class="nm">初中物理 · 一对一</div><div class="ds">同步提升 · 中考冲刺</div></td><td style="color:#8A929E;font-size:12.5px">一对一</td><td class="pr">250 元<small>/课时</small></td></tr>
+<tr><td><div class="nm">初中物理 · 小班</div><div class="ds">3-5 人精品小班</div></td><td style="color:#8A929E;font-size:12.5px">小班</td><td class="pr">160 元<small>/人/课时</small></td></tr>
+<tr><td><div class="nm">高中物理 · 一对一</div><div class="ds">同步提升 · 高考冲刺</div></td><td style="color:#8A929E;font-size:12.5px">一对一</td><td class="pr">320 元<small>/课时</small></td></tr>
+<tr><td><div class="nm">高中物理 · 小班</div><div class="ds">3-5 人精品小班</div></td><td style="color:#8A929E;font-size:12.5px">小班</td><td class="pr">200 元<small>/人/课时</small></td></tr></table>
+    <div class="trialbox"><div class="lb">首次试听享半价（一对一）<em>一节完整正课，满意再正式报名</em></div><div class="vals"><div class="v"><b>125</b><i>初中</i></div><div class="v"><b>160</b><i>高中</i></div></div></div>
+    <div class="note">1 课时 = 60 分钟；首次试听享半价（一对一），满意再正式报名。上课形式：一对一 / 小班（3-5 人）；线上为主，通州临河里及周边可线下。</div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">📈 物理提分案例</div>
+    <div class="sec-sub">真实学员，数据来自期中/期末与中考成绩</div>
+    <div class="case"><div class="g">初三物理</div><div class="p">基础薄弱，公式理解不透，实验题和综合题丢分严重</div><div class="nums"><div><div class="k">辅导前</div><div class="v">45-55 分</div></div><div><div class="k">现在</div><div class="v up">85-95 分</div></div></div><div class="r">3 个月后成绩稳定提升，中考物理稳定 90+ 分。</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">🎓 师资背书</div>
+    <div class="sec-sub">电子工程科班背景，物理是我的主攻方向</div>
+    <div class="creds">
+      <div>清华大学 3 年联合培养 · 硕士</div><div>4 年一线提分经验</div><div>累计辅导 50+ 名学生</div><div>家长续费率 90%</div>
+    </div>
+    <div style="margin-top:14px">
+      <div class="honor"><span class="dot">◆</span><span>TI 杯上海市大学生电子设计竞赛 三等奖</span></div>
+<div class="honor"><span class="dot">◆</span><span>电子类学科竞赛获奖 10+ 次</span></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">❓ 家长常问</div>
+    <div class="sec-sub">关于物理辅导的常见问题</div>
+    <details><summary>初中物理什么时候开始补？</summary><div class="a">八下力学和九上电学是两个分水岭。力学没学透，后面压强浮力全受影响；电学没学透，电功率综合题就崩。发现卡住就补，别等到初三总复习。</div></details>
+<details><summary>公式都背下来了，为什么还是不会做题？</summary><div class="a">物理考的是过程分析，不是套公式。拿到题先定研究对象、画受力图或电路图、判断用什么规律，最后才选公式。顺序反了就会背得越多越乱。</div></details>
+<details><summary>初中物理学得还行，高中怎么就跟不上了？</summary><div class="a">高中从定性变定量、从单一过程变多过程综合，还要用矢量和函数工具。必修一前两章（运动学、受力分析）是地基，地基不牢后面全浮，先把受力分析补扎实。</div></details>
+<details><summary>实验探究题怎么才能拿满分？</summary><div class="a">按“目的 → 操作 → 现象 → 结论”四段写，结论必须回扣探究目的，用教材术语（控制变量、转换法、多次测量求平均值），踩分点就不会漏。</div></details>
+<details><summary>电学动态电路分析总错？</summary><div class="a">固定三步：先判断串并联 → 再看滑动变阻器阻值变化引起总电阻怎么变 → 最后用欧姆定律推电流电压分配。按这个顺序画一遍图，基本不会错。</div></details>
+  </div>
+
+  <div class="cta">
+    <h2>物理试听 · 半价体验</h2>
+    <p>物理首次试听半价，一节完整正课，课后给学情判断和后续建议。</p>
+    <div class="qrbox"><img src="qr.png" alt="扫码打开物理课程页"></div>
+    <div class="cap">长按识别 / 扫码打开本页</div>
+    <a class="phone" href="tel:17763461806">📞 177-6346-1806</a>
+    <div class="psub">微信同号 · 发送「年级 + 薄弱点」即可预约</div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">🔗 我还教这些科目</div>
+    <div class="sec-sub">每科都有独立的课程页，按需查看</div>
+    <div class="cross">
+      <a href="/math/"><b>数学</b><i>小学 + 初中</i></a>
+<a href="/chemistry/"><b>化学</b><i>初中</i></a>
+    </div>
+  </div>
+
+  <div class="foot">
+    林老师 · 北京物理一对一辅导<br>
+    <a href="https://ethanlin616.github.io">返回招生主页</a>　电话 177-6346-1806<br>
+    © 2026 林老师　本页信息真实有效，最终解释权归本人所有
+  </div>
+
+</div>
+<script>
+(function(){
+  var tabs=document.querySelectorAll('.tab');
+  var panels=document.querySelectorAll('.tabpanel');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.classList.remove('on')});
+      panels.forEach(function(p){p.classList.remove('on')});
+      t.classList.add('on');
+      var el=document.getElementById('panel-'+t.dataset.tab);
+      if(el) el.classList.add('on');
+    });
+  });
+})();
+</script>
+</body>
+</html>

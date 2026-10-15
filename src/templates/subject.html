@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>$title</title>
+<meta name="description" content="$desc">
+<link rel="canonical" href="$canonical">
+<meta property="og:type" content="website">
+<meta property="og:title" content="$title">
+<meta property="og:description" content="$desc">
+<meta property="og:image" content="$cover">
+<meta property="og:url" content="$canonical">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="format-detection" content="telephone=no">
+<style>$css</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brand">$brand<small>$brandsub</small></div>
+    <div class="subj-nav">
+      $subjnav
+    </div>
+  </div>
+
+  <div class="hero">
+    <span class="kicker">$kicker</span>
+    <h1>$hero_title</h1>
+    <div class="sub">$hero_sub</div>
+    <div class="chips">
+      $chips
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">🎯 这个科目，孩子常卡在这些地方</div>
+    <div class="sec-sub">以下都是我课堂上真实遇到的高频问题</div>
+    $pains
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">🧩 我怎么教</div>
+    <div class="sec-sub">不是多讲几道题，是给一套能复用的方法</div>
+    $methods
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">📚 $name课程体系</div>
+    <div class="sec-sub">按学段看完整模块，点上方标签切换</div>
+    $tabs
+    $outline
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">💰 $name课程定价</div>
+    <div class="sec-sub">公开透明，1 课时 = 60 分钟</div>
+    $ptable
+    $trialbox
+    <div class="note">$pricenote</div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">📈 $name提分案例</div>
+    <div class="sec-sub">真实学员，数据来自期中/期末与中考成绩</div>
+    $cases
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">🎓 师资背书</div>
+    <div class="sec-sub">$crednote</div>
+    <div class="creds">
+      $creds
+    </div>
+    <div style="margin-top:14px">
+      $honors
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">❓ 家长常问</div>
+    <div class="sec-sub">关于$name辅导的常见问题</div>
+    $faq
+  </div>
+
+  <div class="cta">
+    <h2>$name试听 · 半价体验</h2>
+    <p>$trialnote</p>
+    <div class="qrbox"><img src="$qr" alt="扫码打开$name课程页"></div>
+    <div class="cap">长按识别 / 扫码打开本页</div>
+    <a class="phone" href="tel:$phone">📞 $phone_display</a>
+    <div class="psub">$wechat_note · 发送「年级 + 薄弱点」即可预约</div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">🔗 我还教这些科目</div>
+    <div class="sec-sub">每科都有独立的课程页，按需查看</div>
+    <div class="cross">
+      $cross
+    </div>
+  </div>
+
+  <div class="foot">
+    $brand · 北京$name一对一辅导<br>
+    <a href="$base_url">返回招生主页</a>　电话 $phone_display<br>
+    © $year $brand　本页信息真实有效，最终解释权归本人所有
+  </div>
+
+</div>
+<script>
+(function(){
+  var tabs=document.querySelectorAll('.tab');
+  var panels=document.querySelectorAll('.tabpanel');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.classList.remove('on')});
+      panels.forEach(function(p){p.classList.remove('on')});
+      t.classList.add('on');
+      var el=document.getElementById('panel-'+t.dataset.tab);
+      if(el) el.classList.add('on');
+    });
+  });
+})();
+</script>
+</body>
+</html>

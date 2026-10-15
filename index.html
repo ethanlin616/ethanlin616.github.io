@@ -273,6 +273,16 @@
   .wb-enter:active{transform:translateY(1px);}
   .wb-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px;}
   .wb-tags span{font-size:12px;font-weight:700;color:var(--c1);background:#fff;border:1px solid #CFE0FF;border-radius:999px;padding:6px 12px;}
+  /* 学科分流入口 */
+  .subj-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:6px}
+  .subj-card{display:block;background:linear-gradient(135deg,rgba(0,113,227,.06),rgba(90,200,250,.12));border:1px solid rgba(0,113,227,.16);border-radius:16px;padding:18px;transition:transform .18s ease,box-shadow .18s ease}
+  .subj-card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,113,227,.14)}
+  .sc-h{display:flex;align-items:baseline;gap:8px}
+  .sc-name{font-size:19px;font-weight:800;color:var(--c1)}
+  .sc-range{font-size:11.5px;color:#6B7280}
+  .sc-desc{font-size:12.5px;color:#4B5563;margin-top:8px;line-height:1.6}
+  .sc-go{font-size:12.5px;font-weight:800;color:var(--c1);margin-top:10px}
+  .subj-tip{font-size:11.5px;color:#9CA3AF;margin-top:10px}
 </style>
 </head>
 <body data-page-node-id="wg6CdPjaUspRtRR1UBrmaD">
@@ -355,6 +365,28 @@
       <div class="svc-item" data-page-node-id="a62aKBbGsVhDHpnTUMhzp4"><b data-page-node-id="aGtSNcAPdDmlFvOz2GfaCj">可约区域</b><span data-page-node-id="aXNffAjJDC5tepiUrAaQGA">通州临河里周边线下，其他区域线上</span></div>
       <div class="svc-item" data-page-node-id="LEdpMyy7Ps6fKOkiM871gg"><b data-page-node-id="k4UdaHQchDhbh420tcik67">排课时间</b><span data-page-node-id="y6eVXsDpfw3SmYu16HvChw">工作日晚上 / 周末全天，可沟通</span></div>
     </div>
+  </section>
+
+  <section>
+    <div class="sec-title"><span class="dot"></span>按科目看课程<small>每科独立页面</small></div>
+    <div class="subj-cards">
+      <a class="subj-card" href="/math/">
+        <div class="sc-h"><span class="sc-name">数学</span><span class="sc-range">小学 · 初中</span></div>
+        <div class="sc-desc">应用题读题方法 · 几何辅助线思路 · 函数数形结合</div>
+        <div class="sc-go">查看数学课程 →</div>
+      </a>
+      <a class="subj-card" href="/physics/">
+        <div class="sc-h"><span class="sc-name">物理</span><span class="sc-range">初中 · 高中</span></div>
+        <div class="sc-desc">过程分析四步法 · 电学动态电路 · 实验探究踩分点</div>
+        <div class="sc-go">查看物理课程 →</div>
+      </a>
+      <a class="subj-card" href="/chemistry/">
+        <div class="sc-h"><span class="sc-name">化学</span><span class="sc-range">初中</span></div>
+        <div class="sc-desc">从化合价推导方程式 · 酸碱盐知识网络 · 实验探究</div>
+        <div class="sc-go">查看化学课程 →</div>
+      </a>
+    </div>
+    <div class="subj-tip">每科都有独立的课程大纲、定价、提分案例和试听安排，点进去看更详细。</div>
   </section>
 
   <section data-page-node-id="klEhi56czevUj1YdySW43T">
