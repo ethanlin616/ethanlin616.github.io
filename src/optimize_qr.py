@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-v6：修掉二维码被压扁的显示缺陷，并把内联体积降下来。
+二维码修正：修掉被压扁的显示缺陷，并把内联体积降下来。
 
 问题：主页内联的是整张微信名片截图（200x295 竖图），但容器是 70x70 正方形，
       图片被纵向压成 0.34 倍，二维码变形；且同一张图重复内联 3 次，共 92KB。
 处理：用 src/qr_tool.py 从高清原图重建出正方形二维码（360x360，2.3KB），
       替换全部内联位置，并给容器补 object-fit，避免以后再被拉伸。
-幂等：已替换过则直接退出。
+幂等：靠 <!-- v6:qr --> 标记跳过。
+文件名不用版本号，避免和内容轮次（v2~v6）的编号混在一起。
 """
 import os
 import re
@@ -30,7 +31,7 @@ def png_size(path):
 def main():
     html = open(HTML, encoding="utf-8").read()
     if MARKER in html:
-        print("v6 已应用，跳过")
+        print("二维码已替换过，跳过")
         return
 
     if not os.path.exists(QR):
