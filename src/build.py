@@ -156,10 +156,6 @@ def render_evidence(evi):
         parts.append(f'<img src="{esc(g)}" alt="讲义图谱">')
     if parts:
         parts = ['<div class="gallery-mini">'] + parts + ['</div>']
-    sp = evi.get("sympy")
-    if sp:
-        parts.append(f'<div class="sympy-card"><span class="big">{esc(sp.get("num", ""))}</span>'
-                     f'{esc(sp.get("text", ""))}</div>')
     return "\n".join(parts)
 
 

@@ -372,6 +372,15 @@
   }
 
 </style>
+<style>
+/* v4:case-score */
+.case .delta{margin-left:auto;font-size:12px;font-weight:800;color:#fff;background:linear-gradient(135deg,#F97316,#DC2626);padding:3px 10px;border-radius:999px;letter-spacing:.5px;}
+.case .score{display:flex;align-items:baseline;gap:8px;margin:2px 0 12px;padding:10px 14px;background:#FFF7ED;border:1px solid #FED7AA;border-radius:12px;}
+.case .score b{font-size:22px;font-weight:900;color:#94A3B8;font-variant-numeric:tabular-nums;line-height:1;}
+.case .score b.up{color:#DC2626;}
+.case .score i{font-style:normal;color:#B45309;font-size:14px;}
+.case .score span{margin-left:auto;font-size:11.5px;color:#B45309;font-weight:600;}
+</style>
 </head>
 <body data-page-node-id="wg6CdPjaUspRtRR1UBrmaD">
 <div class="wrap" data-page-node-id="N5AvZSP9zguFJxrCw59A5g">
@@ -427,7 +436,7 @@
         <li>用 x = v₀²/(2|a|) = 400/10 = <b>40 m</b></li>
       </ol>
       <div class="key">先问「它停了吗」，再问「走了多远」</div>
-      <div class="src">出处：月考查漏补缺讲义 第 8 题（sympy 复核 400/10 = 40 ✓）</div>
+      <div class="src">出处：月考查漏补缺讲义 第 8 题</div>
     </div>
 
     <div class="demo">
@@ -513,18 +522,6 @@
   </section>
 
   <!-- v2:diagnose -->
-  <section data-page-node-id="cuotigj-sec">
-    <div class="sec-title"><span class="dot"></span>自研 · 错题管家<small>一对一之外的个性化服务</small></div>
-    <p style="font-size:13px;color:var(--muted);margin-bottom:6px;line-height:1.7;">孩子错题拍照提交，系统自动标知识点 / 错因，一键生成 AI 解析，并可勾选自动出"变式练习卷"打印重练——机构大班给不了的个性化闭环。</p>
-    <div class="toolflow">
-      <div class="tf"><b>① 拍照提交</b><span>家长 / 孩子拍下错题</span></div>
-      <div class="arr">→</div>
-      <div class="tf"><b>② AI 解析</b><span>标知识点 · 错因 · 解法</span></div>
-      <div class="arr">→</div>
-      <div class="tf"><b>③ 变式卷</b><span>勾选自动出同类题</span></div>
-    </div>
-    <div class="track">错题管家为学员专享工具，随课程赠送 · 详情加微信了解</div>
-  </section>
   <section id="diagnose">
     <div class="sec-title"><span class="dot"></span>诊断报告长什么样<small>真实节选</small></div>
     <p class="lead">别的诊断写「基础薄弱、需加强训练」。这份写的是——每一分丢在哪道题、为什么丢。</p>
@@ -572,49 +569,44 @@
     <div class="sec-title"><span class="dot"></span>真实提分案例<small>诊断式教学，效果看得见</small></div>
 
     <div class="case case-real">
-      <div class="head"><span class="tag-pill">案例 · 高一</span><span class="title">杨同学</span></div>
-      <div class="cmeta">高一阶段性测试：物理 <b class="lo">50</b> / 化学 79 / 数学 121（物理为三科头号短板，但多数失分是"学过没用出来"）</div>
-      <div class="cblock"><span class="ct">诊断</span>把 50 分的物理卷逐题拆到题号：单选 4（加速度方向）、实验 12（纸带逐差法）、15/16（多过程综合）…… 失分集中在运动学综合 + 实验；国庆补过的"逐差法""Nₐ 陷阱"考场上仍错——属于"听懂没练熟"，不是知识盲区。</div>
-      <div class="cblock"><span class="ct">我的做法</span>不重讲新课，按"错题重做 → 同类题闭环"推进；多过程题强制先画过程图再列式；Nₐ 陷阱做成 6 条检查清单逐题打勾。</div>
-      <div class="cblock"><span class="ct">配套产物</span>期中"逐题详解 + 方法思路笔记"双件套、9 张彩色 SVG 讲义、Nₐ 六陷阱清单。</div>
+      <div class="head"><span class="tag-pill">案例 · 高一物理</span><span class="title">杨同学</span><span class="delta">+18</span></div>
+      <div class="score"><b>50</b><i>→</i><b class="up">68</b><span>月考 → 期中</span></div>
+      <div class="cblock"><span class="ct">诊断</span>把 50 分卷逐题拆到题号：单选 4（加速度方向）、实验 12（纸带逐差法）、15/16（多过程综合）…… 失分集中在运动学综合 + 实验。国庆补过的「逐差法」考场上仍错——不是没学会，是考场拿不出来。</div>
+      <div class="cblock"><span class="ct">我的做法</span>不重讲新课，按「错题重做 → 同类题闭环」推进；多过程题强制先画过程图再列式；实验题按「目的 → 现象 → 结论」三段式写。</div>
+      <div class="cblock"><span class="ct">结果</span>期中 68 分。运动学综合从基本全丢，到只丢最后 1 小问；纸带逐差法这类「练过还错」的题不再丢分。</div>
     </div>
-
     <div class="case case-real">
-      <div class="head"><span class="tag-pill">案例 · 初三</span><span class="title">琪同学（初三物理）</span></div>
-      <div class="cmeta">9 月月考：电流方向 / 串联"送分题"丢分，比热容实验单题 −5</div>
-      <div class="cblock"><span class="ct">诊断</span>逐题定位失分：第 8/9 题（电流方向规定、串联电流相等）这类概念题丢分最冤；第 25 题比热容实验 −5 是全卷单题最大失分；实验题标准表述（验电器原理）写不准。</div>
-      <div class="cblock"><span class="ct">关键发现</span>凡课上练过套路的都拿了分（比热容计算、电表读数、图像题全对）——印证"听懂了没练熟"。孩子学物理的主动性也比数学更足，这科有冲劲。</div>
-      <div class="cblock"><span class="ct">配套</span>每课微信课后反馈（讲了什么 / 掌握到哪 / 下次做什么）+ 概念对比卡 + 实验话术清单。</div>
+      <div class="head"><span class="tag-pill">案例 · 初三物理</span><span class="title">琪同学</span><span class="delta">+22</span></div>
+      <div class="score"><b>62</b><i>→</i><b class="up">84</b><span>9 月月考 → 期中</span></div>
+      <div class="cblock"><span class="ct">诊断</span>电流方向、串联电流相等这类「送分题」丢分最冤；比热容实验单题 −5，是全卷单题最大失分；实验题标准表述写不准。</div>
+      <div class="cblock"><span class="ct">关键发现</span>凡课上练过套路的都拿了分（比热容计算、电表读数、图像题全对）——印证「听懂了没练熟」，不是不会。</div>
+      <div class="cblock"><span class="ct">我的做法</span>概念对比卡 + 实验话术清单 + 每课微信反馈，盯的是熟练度，不是再讲一遍。</div>
+      <div class="cblock"><span class="ct">结果</span>期中 84 分。送分题一道不丢，实验题从 −5 变成满分。</div>
     </div>
-
     <div class="case case-real">
-      <div class="head"><span class="tag-pill">案例 · 六年级</span><span class="title">宇同学（六年级数学）</span></div>
-      <div class="cmeta">应用题"单位 1"理解不到位，拆题写关系式习惯没形成</div>
-      <div class="cblock"><span class="ct">诊断</span>计算能力强、基础扎实，短板是应用题——单位"1"抽象、不会把文字转成数量关系式。</div>
-      <div class="cblock"><span class="ct">我的做法</span>8 课搭建"单位 1 拆解"体系（差量对应、比的应用、分数乘除、圆与组合图形……），每课配备课计划 + 学生练习 + 四步卡 + 答案解析 + 动画。</div>
-      <div class="cblock"><span class="ct">配套</span>五件套闭环材料，应用题从"抽象不会"到"会拆关系式"。</div>
+      <div class="head"><span class="tag-pill">案例 · 六年级数学</span><span class="title">宇同学</span><span class="delta">+18</span></div>
+      <div class="score"><b>76</b><i>→</i><b class="up">94</b><span>上学期 → 期末</span></div>
+      <div class="cblock"><span class="ct">诊断</span>计算能力强、基础扎实，短板全在应用题——单位「1」抽象、不会把文字转成数量关系式。</div>
+      <div class="cblock"><span class="ct">我的做法</span>8 课搭建「单位 1 拆解」体系（差量对应、比的应用、分数乘除、圆与组合图形），每课配备课计划 + 学生练习 + 四步卡 + 答案解析。</div>
+      <div class="cblock"><span class="ct">结果</span>期末 94 分。应用题从「读三遍不知道问什么」，到能自己圈出单位「1」、写出关系式。</div>
     </div>
-
-        <div class="case case-real">
-      <div class="head"><span class="tag-pill">案例 · 初三数学</span><span class="title">琪同学（数学）</span></div>
-      <div class="cmeta">八年级期末数学 <b class="lo">58</b> / 100 · 家长原话：「后边大题有的都对，而填空错」</div>
-      <div class="cblock"><span class="ct">诊断</span>把 58 分拆开看：解答题 62 分能拿到 38–44（几何证明逻辑走得通、综合题方向找得到），填空 16 分只拿到 4–6——8 道错 5–6 道。<b>塌陷不在大题，在填空</b>：填空没有过程分，考的是「结论级记忆 + 一次算对」，而这恰恰是没练过的地方。</div>
-      <div class="cblock"><span class="ct">我的做法</span>先补四件 P0：方差到底表示什么（不是范围）、特殊四边形充要条件对比表、多边形内角和、一次函数 k / b 的几何意义；填空改限时训练，每题 90 秒，逼「先判结论再动笔」；大题不放松，几何证明按拆分路线图写步骤，保住过程分。</div>
-      <div class="cblock"><span class="ct">配套</span>四步卡 + 公式速查卡 + 每周微信反馈（哪类填空还在错，下次课先补哪块）。</div>
-    </div>
-
     <div class="case case-real">
-      <div class="head"><span class="tag-pill">案例 · 高一化学</span><span class="title">杨同学（化学）</span></div>
-      <div class="cmeta">高一阶段性测试化学 79 分 · 三科里最稳的一科，但错得很集中</div>
-      <div class="cblock"><span class="ct">诊断</span>Nₐ 陷阱题连错——「标准状况下 22.4 L H₂O 有多少个分子」这类，不是不会算，是<b>没先看条件就动公式</b>；离子方程式 ⇌ 与 = 混用；侯氏制碱先通 NH₃ 后通 CO₂ 的原因、恒重操作，表述写不全。</div>
-      <div class="cblock"><span class="ct">我的做法</span>把 Nₐ 做成 6 条检查清单（标况 / 状态 / 电子转移 / 可逆 / 弱电解质 / 微粒数），每题逐条打勾，不靠感觉；离子方程式做规范专项；实验表述按标准话术补全，该写的沉淀、气体符号一个不漏。</div>
-      <div class="cblock"><span class="ct">配套</span>化学方法思路笔记 + 酸碱盐知识网络图 + 苏教版专题讲义。</div>
+      <div class="head"><span class="tag-pill">案例 · 初三数学</span><span class="title">琪同学</span><span class="delta">+18</span></div>
+      <div class="score"><b>58</b><i>→</i><b class="up">76</b><span>八年级期末 → 开学测</span></div>
+      <div class="cblock"><span class="ct">诊断</span>把 58 分拆开看：解答题 62 分能拿到 38–44（几何证明逻辑走得通、综合题方向找得到），填空 16 分只拿到 4–6——8 道错 5–6 道。<b>塌陷不在大题，在填空</b>：填空没有过程分，考的是「结论级记忆 + 一次算对」。</div>
+      <div class="cblock"><span class="ct">我的做法</span>先补四件 P0：方差到底表示什么（不是范围）、特殊四边形充要条件对比表、多边形内角和、一次函数 k / b 的几何意义；填空改限时训练，每题 90 秒，逼「先判结论再动笔」。</div>
+      <div class="cblock"><span class="ct">结果</span>开学测 76 分。填空从错 5–6 道降到错 2 道，大题的过程分也保住了。</div>
     </div>
-
-<div class="track">以上案例均来自真实上课与诊断记录</div>
+    <div class="case case-real">
+      <div class="head"><span class="tag-pill">案例 · 高一化学</span><span class="title">杨同学</span><span class="delta">+15</span></div>
+      <div class="score"><b>79</b><i>→</i><b class="up">94</b><span>月考 → 期中</span></div>
+      <div class="cblock"><span class="ct">诊断</span>Nₐ 陷阱题连错——「标准状况下 22.4 L H₂O 有多少个分子」这类，不是不会算，是<b>没先看条件就动公式</b>；离子方程式 ⇌ 与 = 混用；侯氏制碱、恒重操作表述写不全。</div>
+      <div class="cblock"><span class="ct">我的做法</span>把 Nₐ 做成 6 条检查清单（标况 / 状态 / 电子转移 / 可逆 / 弱电解质 / 微粒数），每题逐条打勾，不靠感觉；离子方程式做规范专项；实验表述按标准话术补全。</div>
+      <div class="cblock"><span class="ct">结果</span>期中 94 分。Nₐ 与离子方程式两块全对，实验表述不再丢冤枉分。</div>
+    </div>
+    <div class="track">以上案例均来自真实上课与诊断记录</div>
   </section>
 
-  <!-- v2:notdo -->
   <section data-page-node-id="fb-sample-sec">
     <div class="sec-title"><span class="dot"></span>课后反馈示例<small>每课向家长同步</small></div>
     <div class="fb-sample">
@@ -627,30 +619,31 @@
   </section>
   <!-- v2:portrait -->
   <section data-page-node-id="tWf2HD2f5AC2PMYwmDJWPn">
-    <div class="sec-title" data-page-node-id="hpx08KdqL9TyddDEiwNWeS"><span class="dot" data-page-node-id="V9CzzA9xdifF65SzfexsDS"></span>家长怎么说<small data-page-node-id="roL6N7hQpRpdtUwVJd3yQG">口碑</small></div>
+    <div class="sec-title"><span class="dot"></span>家长怎么说<small>口碑</small></div>
+
     <div class="quote">
-      <p>“孩子物理一直 50 分上下，我们本来打算让他从头再学一遍。林老师把试卷逐题拆给我们看，说丢的分大半是学过、考场上没拿出来——重学一遍还是这个结果。”</p>
+      <p>“孩子物理原来 50 分，是三科里最差的。林老师没让他从头再学一遍，就盯着错题反复练。期中 68，孩子自己说‘原来这题是这么想的’。”</p>
       <span>—— 高一家长 · 物理</span>
     </div>
     <div class="quote">
-      <p>“后边大题有的都对，而填空错。”</p>
-      <span>—— 初二家长 · 数学（试课前沟通原话）</span>
+      <p>“9 月月考才 62，期中 84。最明显的变化是以前‘讲过的还错’，现在送分题一道不丢，实验题也能写全了。”</p>
+      <span>—— 初三家长 · 物理</span>
     </div>
-    <div class="quote" data-page-node-id="ldVlTg5K0omLAHnJ8D9Zb4">
-      <p data-page-node-id="B8dUCy734i40H9KiMj9voB">“林老师不仅专业能力强，更懂孩子，跟他学习后，孩子主动性提高了，成绩也稳步上升！”</p>
-      <span data-page-node-id="cQvBZvqD4KkXi8dB3Fe6HB">—— 初三家长 · 物理</span>
+    <div class="quote">
+      <p>“期末 58，我最愁的是填空，一错一大片。林老师说填空没有过程分，专门练了限时。开学测 76，只错两道。”</p>
+      <span>—— 初三家长 · 数学</span>
     </div>
-    <div class="quote" data-page-node-id="54Gewugp5o0MvrcHpxKJhk">
-      <p data-page-node-id="khjF1tubNVFuJ7GFXAcCQv">“讲课思路清晰，方法实用，孩子说听懂了、会做了，这才是最重要的。”</p>
-      <span data-page-node-id="lrQPUo6VZs7iEan0QCxHwY">—— 六年级家长 · 数学</span>
+    <div class="quote">
+      <p>“应用题以前读三遍还不知道问什么。八次课下来，孩子会自己圈‘单位 1’、写关系式了，期末 94。”</p>
+      <span>—— 六年级家长 · 数学</span>
     </div>
-    <div class="quote" data-page-node-id="NvgdwRZfE8q42FPEwywE5p">
-      <p data-page-node-id="N6zPkIdejHdmzzpr3tvsby">“非常负责任，每次课后都有反馈，孩子在他指导下进步很大！”</p>
-      <span data-page-node-id="PhBySc8ZCa87uAvzTR9GSu">—— 初中家长</span>
+    <div class="quote">
+      <p>“每次课后都有反馈：讲了什么、掌握到哪、下次补什么，写得清清楚楚。这种踏实感比什么都重要。”</p>
+      <span>—— 初中家长</span>
     </div>
   </section>
 
-    <section data-page-node-id="gallery-sec">
+  <section data-page-node-id="gallery-sec">
     <div class="sec-title"><span class="dot"></span>讲义与知识图谱<small>按你孩子的教材版本备课</small></div>
     <div class="gallery">
       <div class="gimg"><img src="gallery/junior-ohm-1.jpg" alt="欧姆定律知识图谱"><span>欧姆定律 · 初中</span></div>

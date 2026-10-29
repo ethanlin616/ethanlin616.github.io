@@ -157,9 +157,6 @@ details .a{padding:0 16px 14px;font-size:12.5px;color:var(--ink2)}
 .ms-item .d{font-size:12.5px;color:var(--ink2);line-height:1.65}
 .gallery-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
 .gallery-mini img{width:100%;border-radius:10px;border:1px solid var(--line);aspect-ratio:3/4;object-fit:cover}
-.sympy-card{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:12px;padding:14px 16px;font-size:12.5px;color:var(--ink2);line-height:1.7}
-.sympy-card b{color:var(--c1)}
-.sympy-card .big{font-size:22px;font-weight:900;color:#0B4E9E;margin-right:2px}
 @media(max-width:400px){ .gallery-mini{grid-template-columns:repeat(2,1fr)} }
 
 /* ===== 一道题，看我怎么教（v2） ===== */
@@ -216,7 +213,7 @@ details .a{padding:0 16px 14px;font-size:12.5px;color:var(--ink2)}
   <div class="sec">
     <div class="sec-title">🔍 一道题，看我怎么教</div>
     <div class="sec-sub">先看学生怎么错，再看我怎么判——差别就在这几步</div>
-    <div class="demo"><span class="dtag">高一 · 刹车陷阱</span><div class="q">汽车以 20 m/s 行驶，刹车加速度大小 5 m/s²，求 10 s 内的位移。</div><div class="wrong"><b>多数学生会这样错：</b>直接代 x = v₀t + ½at² = 20×10 − 2.5×100 = −50 m。算出个负数，也不知道错在哪。</div><ol><li>先算它什么时候停：t停 = v₀/|a| = 20/5 = <b>4 s</b></li><li>4 s &lt; 10 s → 车 4 秒就停了，后 6 秒位移是 0，不能按 10 秒算</li><li>用 x = v₀²/(2|a|) = 400/10 = <b>40 m</b></li></ol><div class="key">先问「它停了吗」，再问「走了多远」</div><div class="src">出处：月考查漏补缺讲义 第 8 题（sympy 复核 400/10 = 40 ✓）</div></div>
+    <div class="demo"><span class="dtag">高一 · 刹车陷阱</span><div class="q">汽车以 20 m/s 行驶，刹车加速度大小 5 m/s²，求 10 s 内的位移。</div><div class="wrong"><b>多数学生会这样错：</b>直接代 x = v₀t + ½at² = 20×10 − 2.5×100 = −50 m。算出个负数，也不知道错在哪。</div><ol><li>先算它什么时候停：t停 = v₀/|a| = 20/5 = <b>4 s</b></li><li>4 s &lt; 10 s → 车 4 秒就停了，后 6 秒位移是 0，不能按 10 秒算</li><li>用 x = v₀²/(2|a|) = 400/10 = <b>40 m</b></li></ol><div class="key">先问「它停了吗」，再问「走了多远」</div><div class="src">出处：月考查漏补缺讲义 第 8 题</div></div>
 <div class="demo"><span class="dtag">高一 · 摩擦力</span><div class="q">重 100 N 的箱子放在水平桌面，动摩擦因数 μ = 0.2，用 10 N 的水平力拉它，摩擦力多大？</div><div class="wrong"><b>多数学生会这样错：</b>f = μF_N = 0.2 × 100 = 20 N。公式没错，但用错了地方——箱子根本没动。</div><ol><li>先算最大静摩擦：f_max ≈ μF_N = 20 N</li><li>10 N &lt; 20 N → 拉不动，箱子静止，这是静摩擦，不是滑动摩擦</li><li>静摩擦「要多少给多少」→ f = <b>10 N</b></li></ol><div class="key">先判状态，再定方向，最后算大小</div><div class="src">出处：第 04–06 讲 能力进阶 · 方法思路笔记 第二章</div></div>
   </div>
 
@@ -254,7 +251,7 @@ details .a{padding:0 16px 14px;font-size:12.5px;color:var(--ink2)}
   </div>
 
   <div class="sec">
-    <div class="sec-title">📐 讲义实拍与质量背书</div>
+    <div class="sec-title">📐 讲义实拍</div>
     <div class="sec-sub">下面是我上课用的知识图谱（初中电学 / 高中必修一·二），每个知识点一张图。</div>
     <div class="gallery-mini">
 <img src="junior-ohm-1.jpg" alt="讲义图谱">
@@ -264,7 +261,6 @@ details .a{padding:0 16px 14px;font-size:12.5px;color:var(--ink2)}
 <img src="senior-balance-1.jpg" alt="讲义图谱">
 <img src="senior-kinetic-1.png" alt="讲义图谱">
 </div>
-<div class="sympy-card"><span class="big">0</span>处算术错误 · 每份讲义用 sympy 独立重算，抽验 18 题（5 题算式自动复核通过）</div>
   </div>
 
   <div class="sec">
