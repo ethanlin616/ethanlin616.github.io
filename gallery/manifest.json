@@ -1,0 +1,104 @@
+{
+  "note": "招生站讲义图谱清单。pick=true 的图会出现在主页「讲义与知识图谱」区块，按 order 排序。新增图片：把文件放进 gallery/，在 items 里加一条，跑 python3 src/build_gallery.py",
+  "items": [
+    {
+      "file": "senior-kinetic-1.png",
+      "title": "匀变速直线运动",
+      "stage": "高一",
+      "topic": "运动学",
+      "pick": true,
+      "order": 1,
+      "why": "高一第一个分水岭；概念页排版最干净，缩略图下结构仍清晰"
+    },
+    {
+      "file": "senior-balance-1.jpg",
+      "title": "共点力平衡",
+      "stage": "高一",
+      "topic": "受力分析",
+      "pick": true,
+      "order": 2,
+      "why": "受力分析是一切力学的地基；四宫格布局，每格一个判断动作"
+    },
+    {
+      "file": "junior-elec-5.png",
+      "title": "电学题型与易错点",
+      "stage": "初中",
+      "topic": "电学",
+      "pick": true,
+      "order": 3,
+      "why": "全库里最像「教学成果」的一张：题型方法 + 高频易错逐条列，家长一眼看懂价值"
+    },
+    {
+      "file": "junior-ohm-1.jpg",
+      "title": "欧姆定律",
+      "stage": "初中",
+      "topic": "电学",
+      "pick": true,
+      "order": 4,
+      "why": "初中电学第一难点；三要素 + 串并联 + 必背口诀，信息层级最清楚"
+    },
+    {
+      "file": "junior-pow-2.jpg",
+      "title": "电功率",
+      "stage": "初中",
+      "topic": "电学",
+      "pick": true,
+      "order": 5,
+      "why": "中考电学压轴必考；额定值 / 实际值对比表是家长看得懂的难点"
+    },
+    {
+      "file": "junior-cap.jpg",
+      "title": "比热容",
+      "stage": "初中",
+      "topic": "热学",
+      "pick": true,
+      "order": 6,
+      "why": "热学唯一高失分点，也是琪同学月考单题 −5 的地方；配色与其他不同但排版优秀"
+    },
+    {
+      "file": "junior-elec-2.png",
+      "title": "电路连接与电表",
+      "stage": "初中",
+      "topic": "电学",
+      "pick": true,
+      "order": 7,
+      "why": "实物图 + 电路图对照，缩略图辨识度最高，一眼看出是「真讲义」"
+    },
+    {
+      "file": "senior-2-3.png",
+      "title": "必修二 · 公式整理",
+      "stage": "高中",
+      "topic": "曲线运动 / 功能",
+      "pick": true,
+      "order": 8,
+      "why": "补高中覆盖；信息密度偏高，放末位，主要起「体系完整」作用"
+    },
+    {
+      "file": "junior-ohm-3.jpg",
+      "title": "欧姆定律 · 实验探究",
+      "stage": "初中",
+      "topic": "电学",
+      "pick": false,
+      "order": 9,
+      "why": "与欧姆定律同一套 5 页，避免同套重复；需要时可替换 ohm-1"
+    },
+    {
+      "file": "junior-house-1.jpg",
+      "title": "生活用电",
+      "stage": "初中",
+      "topic": "电学",
+      "pick": false,
+      "order": 10,
+      "why": "排版优秀但非重难点，家长感知价值低"
+    },
+    {
+      "file": "senior-2-1.png",
+      "title": "必修二 · 运动学公式",
+      "stage": "高中",
+      "topic": "曲线运动",
+      "pick": false,
+      "order": 11,
+      "why": "纯公式罗列，缩成缩略图后只剩一片灰，不适合展示"
+    }
+  ]
+}

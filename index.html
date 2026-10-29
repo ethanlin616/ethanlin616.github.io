@@ -296,9 +296,10 @@
   .cblock b{color:var(--accent);}
   .fb-sample{background:#F7F9FC;border:1px solid var(--line);border-radius:16px;padding:18px;font-size:13.5px;line-height:1.85;color:var(--ink);}
   .fb-sample .fb-h{font-size:12px;color:var(--muted);margin-bottom:10px;text-align:center;}
-  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  /* v6:gallery-2col */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
   .gallery .gimg{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.05);}
-  .gallery .gimg img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;}
+  .gallery .gimg img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;object-position:top;}
   .gallery .gimg span{display:block;font-size:11.5px;color:var(--muted);padding:7px 6px;text-align:center;}
   .toolflow{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 4px;align-items:stretch;}
   .toolflow .tf{flex:1;min-width:110px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 10px;text-align:center;}
@@ -647,23 +648,21 @@
     </div>
   </section>
 
-  <section data-page-node-id="gallery-sec">
+    <section data-page-node-id="gallery-sec">
     <div class="sec-title"><span class="dot"></span>讲义与知识图谱<small>按你孩子的教材版本备课</small></div>
     <div class="gallery">
-      <div class="gimg"><img src="gallery/junior-ohm-1.jpg" alt="欧姆定律知识图谱"><span>欧姆定律 · 初中</span></div>
-      <div class="gimg"><img src="gallery/junior-ohm-3.jpg" alt="欧姆定律知识图谱"><span>欧姆定律 · 初中</span></div>
-      <div class="gimg"><img src="gallery/junior-pow-2.jpg" alt="电功率知识图谱"><span>电流做功 · 初中</span></div>
-      <div class="gimg"><img src="gallery/junior-house-1.jpg" alt="生活用电知识图谱"><span>生活用电 · 初中</span></div>
-      <div class="gimg"><img src="gallery/junior-cap.jpg" alt="比热容知识图谱"><span>比热容 · 初中</span></div>
-      <div class="gimg"><img src="gallery/junior-elec-2.png" alt="电学专题"><span>电学专题 · 初中</span></div>
-      <div class="gimg"><img src="gallery/junior-elec-5.png" alt="电学专题"><span>电学专题 · 初中</span></div>
-      <div class="gimg"><img src="gallery/senior-balance-1.jpg" alt="共点力平衡"><span>共点力平衡 · 高一</span></div>
-      <div class="gimg"><img src="gallery/senior-kinetic-1.png" alt="匀变速直线运动"><span>匀变速 · 高一</span></div>
-      <div class="gimg"><img src="gallery/senior-2-1.png" alt="必修二知识图谱"><span>曲线运动 · 高二</span></div>
-      <div class="gimg"><img src="gallery/senior-2-3.png" alt="必修二知识图谱"><span>必修二 · 高中</span></div>
+      <div class="gimg"><img src="gallery/senior-kinetic-1.png" alt="匀变速直线运动知识图谱" loading="lazy"><span>匀变速直线运动 · 高一</span></div>
+      <div class="gimg"><img src="gallery/senior-balance-1.jpg" alt="共点力平衡知识图谱" loading="lazy"><span>共点力平衡 · 高一</span></div>
+      <div class="gimg"><img src="gallery/junior-elec-5.png" alt="电学题型与易错点知识图谱" loading="lazy"><span>电学题型与易错点 · 初中</span></div>
+      <div class="gimg"><img src="gallery/junior-ohm-1.jpg" alt="欧姆定律知识图谱" loading="lazy"><span>欧姆定律 · 初中</span></div>
+      <div class="gimg"><img src="gallery/junior-pow-2.jpg" alt="电功率知识图谱" loading="lazy"><span>电功率 · 初中</span></div>
+      <div class="gimg"><img src="gallery/junior-cap.jpg" alt="比热容知识图谱" loading="lazy"><span>比热容 · 初中</span></div>
+      <div class="gimg"><img src="gallery/junior-elec-2.png" alt="电路连接与电表知识图谱" loading="lazy"><span>电路连接与电表 · 初中</span></div>
+      <div class="gimg"><img src="gallery/senior-2-3.png" alt="必修二 · 公式整理知识图谱" loading="lazy"><span>必修二 · 公式整理 · 高中</span></div>
     </div>
-    <div class="track">共 74 张知识图谱覆盖初中电学 / 内能 / 高中必修一·二 · 讲义均彩色图文并茂</div>
+    <div class="track">以上为节选 · 共 74 张知识图谱，覆盖初中电学 / 内能 / 高中必修一·二</div>
   </section>
+
 
   <section data-page-node-id="Gof3ulyAzks88dmL1IkzFg">
     <div class="sec-title" data-page-node-id="JC5PMOUPGOENuAKEvl3KsS"><span class="dot" data-page-node-id="un42KelQH25ttnDlB6ltE7"></span>学术荣誉<small data-page-node-id="DCLksiAPPEIWMCk1Fo2RNH">实力背书</small></div>
