@@ -143,6 +143,39 @@ details .a{padding:0 16px 14px;font-size:12.5px;color:var(--ink2)}
   .creds{grid-template-columns:1fr}
   .cross{grid-template-columns:1fr}
 }
+
+/* 优化：真实案例卡 / 方法样例 / 讲义实拍（2026-10-29） */
+.case-real{background:var(--soft);border-radius:12px;padding:16px;margin-bottom:14px}
+.case-real .cmeta{font-size:12.5px;color:var(--ink2);margin:6px 0 10px;line-height:1.6}
+.case-real .cmeta b.lo{color:#E04646;font-size:15px}
+.case-real .cmeta b.up{color:#E2561B;font-size:15px}
+.cblock{font-size:12.5px;line-height:1.7;margin-bottom:9px;color:var(--ink2)}
+.cblock .ct{display:inline-block;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--c2),var(--c3));font-size:11px;padding:2px 8px;border-radius:999px;margin-right:7px;vertical-align:1px}
+.cblock b{color:var(--c1)}
+.ms-item{background:var(--soft);border-left:3px solid var(--c2);border-radius:8px;padding:12px 14px;margin-bottom:9px}
+.ms-item .h{font-size:14px;font-weight:800;color:var(--c1);margin-bottom:3px}
+.ms-item .d{font-size:12.5px;color:var(--ink2);line-height:1.65}
+.gallery-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.gallery-mini img{width:100%;border-radius:10px;border:1px solid var(--line);aspect-ratio:3/4;object-fit:cover}
+.sympy-card{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:12px;padding:14px 16px;font-size:12.5px;color:var(--ink2);line-height:1.7}
+.sympy-card b{color:var(--c1)}
+.sympy-card .big{font-size:22px;font-weight:900;color:#0B4E9E;margin-right:2px}
+@media(max-width:400px){ .gallery-mini{grid-template-columns:repeat(2,1fr)} }
+
+/* ===== 一道题，看我怎么教（v2） ===== */
+.demo{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:0 2px 12px rgba(30,58,138,.05)}
+.demo .dtag{display:inline-block;font-size:11px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--c2),var(--c3));padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.demo .q{font-size:13.5px;font-weight:700;line-height:1.7;padding:11px 13px;background:var(--soft);border-radius:10px;border-left:3px solid var(--c2)}
+.demo .wrong{margin-top:10px;font-size:12.5px;line-height:1.7;color:#B42318;background:#FEF3F2;border:1px solid #FECDCA;border-radius:10px;padding:10px 13px}
+.demo .wrong b{color:#912018}
+.demo ol{margin-top:10px;counter-reset:d;list-style:none}
+.demo ol li{position:relative;padding-left:24px;font-size:12.5px;line-height:1.7;margin-bottom:6px}
+.demo ol li:last-child{margin-bottom:0}
+.demo ol li::before{counter-increment:d;content:counter(d);position:absolute;left:0;top:2px;width:17px;height:17px;border-radius:50%;background:rgba(37,99,235,.12);color:var(--c2);font-size:10.5px;font-weight:800;text-align:center;line-height:17px}
+.demo ol li b{color:var(--c2)}
+.demo .key{margin-top:11px;font-size:13px;font-weight:800;color:#7C2D12;background:linear-gradient(135deg,#FFF7ED,#FFEDD5);border:1px solid #FED7AA;border-radius:10px;padding:10px 13px;line-height:1.6}
+.demo .key::before{content:"口诀 · ";font-size:10.5px;color:#B45309;letter-spacing:1px}
+.demo .src{margin-top:8px;font-size:11px;color:var(--ink3);line-height:1.6}
 </style>
 </head>
 <body>
@@ -181,12 +214,27 @@ details .a{padding:0 16px 14px;font-size:12.5px;color:var(--ink2)}
   </div>
 
   <div class="sec">
+    <div class="sec-title">🔍 一道题，看我怎么教</div>
+    <div class="sec-sub">先看学生怎么错，再看我怎么判——差别就在这几步</div>
+    <div class="demo"><span class="dtag">高一 · 阿伏加德罗常数</span><div class="q">标准状况下，22.4 L H₂O 含有多少个水分子？</div><div class="wrong"><b>多数学生会这样错：</b>n = V / 22.4 = 1 mol，得 6.02×10²³ 个。数字很漂亮，但前提就不成立。</div><ol><li>先看条件：是不是标准状况？（这题是）</li><li>再看状态：22.4 L/mol 只对<b>气体</b>成立，标准状况下水是<b>液体</b></li><li>所以不能用 V/22.4 算，这题本身就是个陷阱，答案是「无法由此计算」</li></ol><div class="key">先看条件、再看状态、最后才动公式</div><div class="src">出处：月考诊断 · Nₐ 六大陷阱清单（条件 / 状态 / 电子转移 / 可逆 / 弱电解质 / 微粒数）</div></div>
+<div class="demo"><span class="dtag">高一 · 电子转移</span><div class="q">Na₂O₂ 与 H₂O 反应，1 mol Na₂O₂ 完全反应转移多少 mol 电子？</div><div class="wrong"><b>多数学生会这样错：</b>看到生成 O₂，按 2O⁻ → O₂ 算成 2 mol e⁻。把歧化反应当成了单向氧化。</div><ol><li>先标价态：Na₂O₂ 里 O 是 <b>−1</b></li><li>再看产物：O₂ 里是 0（升），NaOH 里是 −2（降）——同一元素既升又降，是歧化</li><li>只数「升」的那一半：2 mol Na₂O₂ 转移 2 mol e⁻ → <b>1 mol Na₂O₂ 转移 1 mol e⁻</b></li></ol><div class="key">歧化反应先标价态，再问「谁升谁降」，只数一半</div><div class="src">出处：月考试卷分析 · 第 15 题 电子转移标注</div></div>
+  </div>
+
+  <div class="sec">
     <div class="sec-title">🧩 我怎么教</div>
     <div class="sec-sub">不是多讲几道题，是给一套能复用的方法</div>
     <div class="method"><div class="t">1. 从原理推导，不靠背</div><div class="d">先掌握化合价，化学式自己推；再掌握四大反应类型，方程式按“反应物类别 → 产物类别 → 配平”推出来，而不是背几十个孤立的式子。</div></div>
 <div class="method"><div class="t">2. 建知识网络图</div><div class="d">以物质类别为骨架，把氧气、碳及其氧化物、金属、酸碱盐串成一张图。做题先定位类别，再调用通性，最后记特性。</div></div>
 <div class="method"><div class="t">3. 实验三段式</div><div class="d">目的 → 操作与现象 → 结论，三者必须对应，用教材术语写完整，踩分点一个不漏。</div></div>
 <div class="method"><div class="t">4. 计算四步法</div><div class="d">设未知 → 写方程式 → 找比例关系（必须代入纯净物质量）→ 列比例求解并带单位。按步走，含杂质题也能解。</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">🧭 方法样例 · 决策树</div>
+    <div class="sec-sub">上面那道题只是其中一条，这些是我课上真用的判定顺序</div>
+    <div class="ms-item"><div class="h">Nₐ 六陷阱清单</div><div class="d">① 是否标况 ② 物质状态（三态）③ 电子转移数 ④ 可逆反应 ⑤ 弱电解质 ⑥ 微粒数。强制逐条打勾，不靠感觉。</div></div>
+<div class="ms-item"><div class="h">离子方程式规范</div><div class="d">⇌ 与 = 分清；电子转移标注格式；该写的沉淀 / 气体符号不漏。</div></div>
+<div class="ms-item"><div class="h">实验表述模板</div><div class="d">侯氏制碱先通 NH₃ 后通 CO₂ 原因、防倒吸、循环利用——按标准话术写全。</div></div>
   </div>
 
   <div class="sec">
@@ -202,13 +250,19 @@ details .a{padding:0 16px 14px;font-size:12.5px;color:var(--ink2)}
     <table class="ptable"><tr><th style="width:52%">课程</th><th style="width:18%">形式</th><th style="width:30%;text-align:right">价格</th></tr><tr><td><div class="nm">初中化学 · 一对一</div><div class="ds">同步提升 · 中考冲刺</div></td><td style="color:#8A929E;font-size:12.5px">一对一</td><td class="pr">250 元<small>/课时</small></td></tr>
 <tr><td><div class="nm">初中化学 · 小班</div><div class="ds">3-5 人精品小班</div></td><td style="color:#8A929E;font-size:12.5px">小班</td><td class="pr">160 元<small>/人/课时</small></td></tr></table>
     <div class="trialbox"><div class="lb">首次试听享半价（一对一）<em>一节完整正课，满意再正式报名</em></div><div class="vals"><div class="v"><b>125</b><i>初中</i></div></div></div>
-    <div class="note">1 课时 = 60 分钟；首次试听享半价（一对一），满意再正式报名。上课形式：一对一 / 小班（3-5 人）；线上为主，通州临河里及周边可线下。</div>
+    <div class="note">1 课时 = 60 分钟；首次试听享半价（一对一），满意再正式报名。上课形式：一对一 / 小班（3-5 人）；线上为主，通州及周边可线下。</div>
   </div>
 
   <div class="sec">
     <div class="sec-title">📈 化学提分案例</div>
-    <div class="sec-sub">真实学员，数据来自期中/期末与中考成绩</div>
-    <div class="case"><div class="g">初三化学</div><div class="p">方程式记了忘、实验题不会，期中刚及格，对化学没信心</div><div class="nums"><div><div class="k">辅导前</div><div class="v">65 分左右</div></div><div><div class="k">现在</div><div class="v up">88+ 分</div></div></div><div class="r">用理科逻辑教化学，从原理推导代替死记硬背，建立知识网络，期末稳定 88+ 分。</div></div>
+    <div class="sec-sub">真实诊断记录，姓名与地区已脱敏</div>
+    <div class="case case-real"><div class="g">高一化学 · 杨同学</div><div class="cmeta">高一阶段性测试化学 79 分，概念基本盘好，弱在 Nₐ 陷阱识别靠感觉、离子方程式书写规范、实验文字表述完整性。</div><div class="cblock"><span class="ct">诊断</span>Nₐ 陷阱题红叉；离子方程式 ⇌ 与 = 混淆；侯氏制碱流程、恒重操作表述不全。</div><div class="cblock"><span class="ct">做法</span>Nₐ 做成 6 条检查清单强制逐条打勾；离子方程式规范专项；实验话术补全。</div><div class="cblock"><span class="ct">产物</span>化学方法思路笔记 + 酸碱盐知识网络图。</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">📐 讲义实拍与质量背书</div>
+    <div class="sec-sub">下面是我上课用的化学讲义样例（彩色图文 + SVG 示意图）。</div>
+    <div class="sympy-card"><span class="big">0</span>处算术错误 · 每份讲义用 sympy 独立重算，抽验 18 题（5 题算式自动复核通过）</div>
   </div>
 
   <div class="sec">

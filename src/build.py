@@ -41,6 +41,26 @@ def render_pains(pains):
     return "\n".join(out)
 
 
+def render_demo(items):
+    """一道题，看我怎么教：题面 → 常见错法 → 判定步骤 → 口诀 → 出处"""
+    if not items:
+        return ""
+    out = []
+    for d in items:
+        steps = "".join(f"<li>{s}</li>" for s in d.get("steps", []))
+        out.append(
+            f'<div class="demo">'
+            f'<span class="dtag">{esc(d["tag"])}</span>'
+            f'<div class="q">{esc(d["q"])}</div>'
+            f'<div class="wrong"><b>多数学生会这样错：</b>{esc(d["wrong"])}</div>'
+            f'<ol>{steps}</ol>'
+            f'<div class="key">{esc(d["key"])}</div>'
+            f'<div class="src">出处：{esc(d["src"])}</div>'
+            f'</div>'
+        )
+    return "\n".join(out)
+
+
 def render_methods(methods):
     out = []
     for i, m in enumerate(methods, 1):
@@ -107,6 +127,42 @@ def render_cases(cases):
     return "\n".join(out)
 
 
+def render_real_cases(cases):
+    out = []
+    for c in cases:
+        blocks = "".join(
+            f'<div class="cblock"><span class="ct">{esc(b["ct"])}</span>{esc(b["text"])}</div>'
+            for b in c.get("blocks", []))
+        out.append(
+            f'<div class="case case-real"><div class="g">{esc(c["grade"])}</div>'
+            f'<div class="cmeta">{esc(c.get("cmeta", ""))}</div>{blocks}</div>')
+    return "\n".join(out)
+
+
+def render_method_sample(ms):
+    if not ms:
+        return ""
+    return "\n".join(
+        f'<div class="ms-item"><div class="h">{esc(it["h"])}</div>'
+        f'<div class="d">{esc(it["d"])}</div></div>'
+        for it in ms.get("items", []))
+
+
+def render_evidence(evi):
+    if not evi:
+        return ""
+    parts = []
+    for g in evi.get("gallery", []):
+        parts.append(f'<img src="{esc(g)}" alt="讲义图谱">')
+    if parts:
+        parts = ['<div class="gallery-mini">'] + parts + ['</div>']
+    sp = evi.get("sympy")
+    if sp:
+        parts.append(f'<div class="sympy-card"><span class="big">{esc(sp.get("num", ""))}</span>'
+                     f'{esc(sp.get("text", ""))}</div>')
+    return "\n".join(parts)
+
+
 def render_creds(creds):
     return "".join(f'<div>{esc(c)}</div>' for c in creds)
 
@@ -170,6 +226,7 @@ def build_subject(key):
         chips=chips,
         name=cfg["name"],
         pains=render_pains(cfg["pains"]),
+        demo=render_demo(cfg.get("demo", [])),
         methods=render_methods(cfg["methods"]),
         tabs=render_tabs(cfg["tabs"]),
         outline=render_outline(cfg["outline"], cfg["tabs"]),
@@ -177,7 +234,10 @@ def build_subject(key):
         trialbox=render_trialbox(cfg["trial_rows"]),
         pricenote=f"{SITE['teaching']['unit_note']}；{SITE['trial']['note']}。"
                   f"上课形式：{SITE['teaching']['form']}；{SITE['teaching']['mode']}。",
-        cases=render_cases(cases),
+        cases=render_real_cases(cfg.get("real_cases", [])),
+        method_sample=render_method_sample(cfg.get("method_sample", {})),
+        evi_note=cfg.get("evi_note", ""),
+        evidence=render_evidence(cfg.get("evidence", {})),
         crednote=SUBJECT_CRED_NOTE[key],
         creds=render_creds(SITE["creds"]),
         honors=render_honors(SUBJECT_HONORS[key]),
@@ -204,6 +264,10 @@ def build_subject(key):
         src = ASSETS / fn
         if src.exists():
             shutil.copy2(src, outdir / fn)
+    for g in cfg.get("evidence", {}).get("gallery", []):
+        src = ROOT / "gallery" / g
+        if src.exists():
+            shutil.copy2(src, outdir / g)
     print(f"[ok] {key}: {outdir/'index.html'} ({len(html)} bytes)")
 
 

@@ -286,6 +286,91 @@
   .sc-desc{font-size:12.5px;color:#4B5563;margin-top:8px;line-height:1.6}
   .sc-go{font-size:12.5px;font-weight:800;color:var(--c1);margin-top:10px}
   .subj-tip{font-size:11.5px;color:#9CA3AF;margin-top:10px}
+
+  /* ===== 内容优化新增样式（2026-10-29） ===== */
+  .case-real .cmeta{font-size:13px;color:var(--muted);margin:2px 0 12px;line-height:1.6;}
+  .case-real .cmeta b.lo{color:#E04646;font-size:16px;}
+  .case-real .cmeta b.up{color:var(--accent);font-size:16px;}
+  .cblock{font-size:13px;line-height:1.7;margin-bottom:11px;color:var(--ink);}
+  .cblock .ct{display:inline-block;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--c1),var(--c2));font-size:11.5px;padding:2px 9px;border-radius:999px;margin-right:8px;vertical-align:1px;}
+  .cblock b{color:var(--accent);}
+  .fb-sample{background:#F7F9FC;border:1px solid var(--line);border-radius:16px;padding:18px;font-size:13.5px;line-height:1.85;color:var(--ink);}
+  .fb-sample .fb-h{font-size:12px;color:var(--muted);margin-bottom:10px;text-align:center;}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  .gallery .gimg{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.05);}
+  .gallery .gimg img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;}
+  .gallery .gimg span{display:block;font-size:11.5px;color:var(--muted);padding:7px 6px;text-align:center;}
+  .toolflow{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 4px;align-items:stretch;}
+  .toolflow .tf{flex:1;min-width:110px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 10px;text-align:center;}
+  .toolflow .tf b{display:block;font-size:14px;margin-bottom:5px;color:var(--ink);}
+  .toolflow .tf span{font-size:12px;color:var(--muted);}
+  .toolflow .arr{align-self:center;color:var(--accent);font-weight:800;font-size:18px;}
+  @media (max-width:560px){ .gallery{grid-template-columns:repeat(2,1fr);} .toolflow .arr{display:none;} }
+
+
+  /* ===== v2：现场感组件（2026-10-29） ===== */
+  .thesis{margin:22px 22px 0;background:linear-gradient(150deg,#0E2C57,#0B4E9E);color:#fff;border-radius:20px;padding:24px 22px;box-shadow:0 14px 34px rgba(11,78,158,.26);}
+  .thesis b{display:block;font-size:19px;font-weight:800;letter-spacing:-.3px;margin-bottom:9px;line-height:1.45;}
+  .thesis p{font-size:13.5px;line-height:1.85;opacity:.93;}
+  .thesis em{font-style:normal;color:#FFD08A;font-weight:800;}
+
+  .lead{font-size:13px;color:var(--muted);margin:-6px 0 18px;line-height:1.8;}
+
+  .demo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;margin-bottom:14px;box-shadow:0 2px 14px rgba(0,0,0,.04);}
+  .demo .dtag{display:inline-block;font-size:11.5px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--c1),var(--c2));padding:3px 11px;border-radius:999px;margin-bottom:12px;letter-spacing:.2px;}
+  .demo .q{font-size:14.5px;font-weight:700;line-height:1.7;color:var(--ink);padding:12px 14px;background:#F5F7FA;border-radius:12px;border-left:3px solid var(--c1);}
+  .demo .wrong{margin-top:11px;font-size:13px;line-height:1.75;color:#B42318;background:#FEF3F2;border:1px solid #FECDCA;border-radius:12px;padding:12px 14px;}
+  .demo .wrong b{color:#912018;}
+  .demo ol{margin-top:12px;}
+  .demo ol li{list-style:none;position:relative;padding-left:26px;font-size:13px;line-height:1.75;color:var(--ink);margin-bottom:8px;}
+  .demo ol li:last-child{margin-bottom:0;}
+  .demo ol li::before{counter-increment:d;content:counter(d);position:absolute;left:0;top:3px;width:18px;height:18px;border-radius:50%;background:rgba(0,113,227,.12);color:var(--c1);font-size:11px;font-weight:800;text-align:center;line-height:18px;}
+  .demo ol{counter-reset:d;}
+  .demo ol li b{color:var(--c1);}
+  .demo .key{margin-top:13px;font-size:13.5px;font-weight:800;color:#7C2D12;background:linear-gradient(135deg,#FFF7ED,#FFEDD5);border:1px solid #FED7AA;border-radius:12px;padding:11px 14px;line-height:1.6;}
+  .demo .key::before{content:"口诀 · ";font-size:11px;color:#B45309;letter-spacing:1px;}
+  .demo .src{margin-top:9px;font-size:11.5px;color:#A1A1AA;line-height:1.6;}
+
+  .tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--card);}
+  .dtable{width:100%;border-collapse:collapse;font-size:12.5px;min-width:340px;}
+  .dtable th{background:#EFF6FF;color:#0B4E9E;font-weight:800;text-align:left;padding:10px 9px;font-size:11.5px;letter-spacing:.3px;white-space:nowrap;}
+  .dtable td{padding:10px 9px;border-top:1px solid var(--line);color:var(--ink);line-height:1.55;vertical-align:top;}
+  .dtable td.no{font-weight:800;color:var(--c1);white-space:nowrap;}
+  .dtable td.lo{font-weight:800;color:#B42318;text-align:right;white-space:nowrap;}
+  .concl{margin-top:14px;background:#F0FDF4;border:1px solid #BBF7D0;border-radius:14px;padding:14px 16px;font-size:13px;line-height:1.8;color:#14532D;}
+  .concl b{color:#166534;}
+
+  .deliver{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .dv{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:15px 14px;}
+  .dv .n{font-size:11px;font-weight:800;color:var(--c1);opacity:.55;letter-spacing:1.2px;}
+  .dv h4{font-size:14px;font-weight:800;margin:3px 0 5px;letter-spacing:-.2px;}
+  .dv p{font-size:12px;color:var(--muted);line-height:1.62;}
+
+  .pf{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:12px;box-shadow:0 2px 14px rgba(0,0,0,.04);}
+  .pf .ph{display:flex;align-items:center;gap:9px;margin-bottom:10px;}
+  .pf .pt{font-size:11.5px;font-weight:800;color:#fff;background:#1D1D1F;padding:3px 10px;border-radius:999px;letter-spacing:.5px;}
+  .pf .pn{font-size:15.5px;font-weight:800;letter-spacing:-.2px;}
+  .pf .pd{font-size:13px;line-height:1.75;color:var(--ink);}
+  .pf .pd .lb{display:inline-block;font-size:11px;font-weight:800;color:var(--c1);background:rgba(0,113,227,.08);padding:1px 7px;border-radius:6px;margin-right:6px;}
+  .pf .act{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);font-size:12.5px;color:var(--muted);line-height:1.75;}
+  .pf .act b{color:var(--ink);}
+  .pf .act .hi{color:var(--accent);font-weight:800;}
+
+  .notdo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:6px 20px;box-shadow:0 2px 14px rgba(0,0,0,.04);}
+  .notdo .ni{padding:16px 0;border-bottom:1px solid var(--line);}
+  .notdo .ni:last-child{border-bottom:none;}
+  .notdo .ni h4{font-size:14.5px;font-weight:800;margin-bottom:5px;color:var(--ink);}
+  .notdo .ni h4::before{content:"\00D7";color:#B42318;font-weight:800;margin-right:8px;}
+  .notdo .ni p{font-size:12.5px;color:var(--muted);line-height:1.75;}
+  .notdo .ni p b{color:var(--ink);}
+
+  @media (max-width:420px){
+    .thesis{margin:18px 18px 0;padding:20px 18px;}
+    .thesis b{font-size:17px;}
+    .deliver{grid-template-columns:1fr;}
+    .demo{padding:17px;}
+  }
+
 </style>
 </head>
 <body data-page-node-id="wg6CdPjaUspRtRR1UBrmaD">
@@ -295,16 +380,22 @@
     <span class="badge" data-page-node-id="naRmS4lpbfS75VGn9FYFkW">北京 · 小学/初中数学 · 物理化学</span>
     <div class="avatar" data-page-node-id="IGeHoABjlRoeLDyEUAA0cz"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwMDAgQDAwMEBAQFBgoGBgUFBgwICQcKDgwPDg4MDQ0PERYTDxAVEQ0NExoTFRcYGRkZDxIbHRsYHRYYGRj/2wBDAQQEBAYFBgsGBgsYEA0QGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBj/wAARCADwAPADASIAAhEBAxEB/8QAHQABAAEEAwEAAAAAAAAAAAAAAAcEBQYIAgMJAf/EAEQQAAEDAwIEAwUFBQQJBQAAAAEAAgMEBREGIQcSMUETUWEIFCJxgSMyQpGhFXKxwfAzUmLRCRYXJEOCkqLhNFODk8L/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQIDBQQG/8QAKREAAgIBBAEEAQQDAAAAAAAAAAECEQMEEiExQQUTIlEyFEJhsSOBof/aAAwDAQACEQMRAD8A3+REQBERAEREAREQBa9cdPa30HwemnsNFG7UeqGtx+z6V4EdO4jbxpO37oyfko49rP2ranSVVWcMOG1U0Xrk8O53eM83uXN/wYvOUjqfw58+nn9LzNa+qqppJq+ocX8738xaD1Lidy4/11Vkvsgy3ifxi4icW78a3Wl+nqwHF0Fsp/s6amHk1g26dzk+ZUcPkLAWYG/kqmSbwmmNoyerneaoiS53MTkqLJBy3Y9cIR9gHdy7A+i+Pztlc24PI3B2CWD7HE9x2afVc3wuYHbEYOD6KqbI2GAtDObJ69Mlc6png2pjXAGRzuZzvU9vyUAtodhfWOI37hcmM5pCB2R7C14PYqbByjkdykZOSqilrJqWpZPTTywzMOWvjcWuaR3BCpNwVxyQcFWTIo3C9n72zNU6RvNLpviXcZrxp6UtjZWz/HPRjpku6ub55yV6O2y52+82imutqrIKyiqYxLDUQPD2SNPQgjqF4TCR2Mg9FOns/wDtMav4J3tlGHPu2l55Aau0zPPweb4T+B/p0PfzUtWR0euCKx6P1fp/Xei6DVWmLhHXWyujEkUrD082uHZwOQR2IV8WZYIiIAiIgCIiAIiIAiIgCIiALXj2sOO0/CXh3HZtN1Aj1VeWubTS4B9zhGz59+/Zvrk9lsJNKyCnkmldysY0ucT2AGSvJLjhxBquK/G26amqSTQh/utHECSGQMJDMfvHLj81aKBF2JJXy3CrnfLUTPMhfI4ue7Jy5xPUk9yVbJHuL3SPzzHOAew81fJvCEUgABa7DQe+ArLJieoJ2HOcYG2AFLBbJcDJx8l1sjcW8wHdVEzcOzjvnCqGRuEYL2EgN2GNv66qgLe8fEBjBHVfWfDk4381V1FO6FrSR8Tkjp/Ema1x5Wd+/wDRQHKljdLNHzAcreme6XOdr65zITmNhx8yO67OUskLtxkHlB7481Suhd4bXEAl5J+W6gmhRxOkLznY7boAH1/hn7oOCQq2khMcFQ478kZJ2zv0CoqUE1LBvlzgP1SxR9qad0RLuwO3qqZwyA4K+VcWKRm3UFpH1O6tJa4N5T2UphqjpaV2AkEELhynmR23dWTINmPZC4/VHCzijFpm/wBwkGkb3KIZmPOWUc7sBk48hnDXehz2Xqe1wc0OaQQdwQvBkOw7PmvTn2LvaBHETQjeHmp6tp1NZIAKeR53raRuA13q9mzXeYwfNS1ZHRtciIqEhERAEREAREQBERAEREBCvtV65OhfZg1BU08xjrrkwWymIOCHS7OP0ZzLyrdcGxxlspPMR1G2w/oBehvt/uDfZ3tP2Ic43mICQ/gHI7P57Bea0z3TTfCT8JyD5q3SBcaqpeImxMeOYtPMR2z2CoAXPdyNGw8l2wU7nnfLjnB+aye2WAlge5vXl37lQSlZYae1PqJWsazJyD/X6q+fsWaWoipBG4Pedj0w0dXH9VnumdKNnrvHcwcjemR0AWR/6uNis9ddnx8s1RmOE4+4zoP5n6LGWRJ0ezHprVsg82qWapIEfMSeSMHufP5AbqthtHgwljIhLUPzyj+6Btzf15qWLdpFxZNXzU7mxlg8NmPiAx0+Z2+n1V0sWhJfdn1s0I8epdncZ5W9gP4/kqyyo1x6RunRCLNPvdS1FW9r3iMiCMebun+aqItMSS1ngNZllPHzyu7NGCf6Cmi4aQkpoqegpqZ0h8QODeznEnBJ8gSc/JXr/Z97tpo0fLzS1JDZJcYL89z/AJdgqvKaLSJsgqHTHu+jJK2aMskmdk7dG74H/asWtdtfLeKeF0bjmUcwA6DPdbJah0k5tigoGx4YDgtHy/8AP5lR/aNImC8Q1j4ctcXuaOx+0IH6fwSOThlcml5SRitz07HHUOgaxwa6RoYfm4hWB9gkdVmFjDk9j12U5Vum5pYoJ+T+z8JxaR5EHP6lUFbpcN1MyRjByvYSNu4dkfzSOXwMml8kB1FEYZy3BVFKzGDjYqVNUaXdHXSPjjwN8YHTyKwK42uWKEycpwHbjHmvTF2rOdkhtlRYu5Uq+zre6/T/ALSukbpbpnRzMrQz4c4e1wLXMdjflIJBx8+yitwLXHIWfcFKeoquOemaelifLK6vjLGRuw4kHOW+ZGM47rXHy6MpcKz2qaQ5gcOhGV9XTSc/uEPiAh3I3ORjfHku5ZFgiIgCIiAIiIAiIgCIiA1P9v6MyezrbHimlk8K7xvMjR8MY5HD4vmSMfVebFOMy7AZzsCvVv2yNPi+eyVqCURc8tvdFWM3IxyvAcfyJXlVRwOnqPDaQPMnoAr+EQjIbVRAvp2u8genXJ6qXrRp73mmD2QEF2CMjosB0xQtqrmzl+43DQMLYrTNviNuDQwYaOXPmvNmybej36TCpvkp7JpwQW1zGsHM4b7K+DTnvFLHBK0FrBk7emw/VZBQ0oZHy4GSrxS0sYJdjd2MrmSyuzuxxKix0mmIJmhrowYxjZXun05BztAjAYB0CvNPTsYzOArjTMY77x/JIciZjc2lYJZRJ4YJb93A6LunsjOaH4B9nk7d/JZXGxrTvuF0ysY6Q8vRatmS5MHuFjhdG4lgJA3J/isSOk44jFyxt5Y8uwR33/zUrzUrX/fHN6Kgmo2OeRydd1VtouqI3/YMTYXNLdnYJBGfX+StFRYmvLJHMw6Nxc306j+akmpoBG52ytFTSjc4HkVnGbTLyimiJ7xYmzNdzxt3acqGb5Qxw1dTTSgAZ2YRjutmblSj4iBnZQXxBs4kmfUM6AnOPwldDTZG3Rx9biSVohu6WiWCd5Y0kA527hSL7NVnrbr7TOkY6KDxnxV7Z3ta4tLGs+Lmz2xjt/4WL1TqimoHtliErWtyJGfeZ2HMO49VLvsZ2+7ye1HZbtSMf7rH4kdTKG5aA5pAa7yyenyXQgubOTPo9Vm/dC+oixLBERAEREAREQBERAEREBhvFnTQ1fwQ1TpsvLffbdLGCM9Q3mHT1AXjjTUcsN2kpnFwEbyHADGcHC9vZo2ywPid917S0/UYXkBqqzCw8Vb7T1kL4BDcJmCAtw7AkOMj8lpHmJHkvGjaDw6mFgZgk9+q2Bs1N7vQRNx2BKijh1b/AH2QVxi5Y2n4RjspTrrnT2i3OnnkawN8z1XM1Et0tqO5o8eyG6Rk9IA0AEgK+UjAQD+qhR3EGSWpb7vlsA6ynYOPk3PVZZaeI1DHFGysl5XnbDtgB5lYvTS7PStXDolCNgI3CrYYyGDDd1Z7PfbZcqdr6eojeXdgVehURsGxCqo7Xya71NcHZzfD8/JcM/Hj9FxkqGnHKuImGRlWcrZCjSO58XO0OGVTTNwDgDIXc2qaB5duqoqy4UkDMySsaB2JwknfRF12W+rYDuVjtaWsyPL9V06g1tbaM4bUM3267qLr5r6aWpd7o57gzqC0gqY6aTMp6uK4M2qgx7XtyO+yibWtC+OZ5aeXP3T2KuVBr2Gpq2x1LiwuPLlwIx81c9QUcV2tDgCCeXIcFrBPFLkxyOOeDo1+vwcyhka+Lw5futc0YG/X9Ox/NbT/AOj804Xai1HqFtRNGIoGUzoQPs5cnOT5OaQPzK1jukokEtJVjmkidyhzRhwH81vV7EOj6mx8Nrrf5pqhjbnKzFM9mGHlBxKw98g4PqF1Yv4tnBmqaRtUiIsSwREQBERAEREAREQBUtyuFNarRU3KrfyQU8ZlefQBVSwviuJjwivIh5s+G3mx/d5hlVk6TZphhvyRg/LRBl34vcQ7lfffaG4i00DpMQRRxNcA3O3PzA5z3WrHHOn1JX8RanUN5hhFTcZG881PHyMkw3Gcdjt07rZiSkjn8KkLBycgwPoo14s2OefTcVNKzxGQvMjZHHdoAO36ryYs0ozq7TPoNbosSh8Y00WXh7TNp9LU5A3LMlVN0sc9/uQ95kLYoz8EZ6Z8yFV6KpiyxU8ZHRg/gsqfbXRME4YB3JxlYyntk2Vxw3QSZjdPw0t00IM1Q5jiMc8fwlvyC6Z+DNmf9q3UtSyTblErmlo+my6Lzc7tcL/HY7dWPgEgy55+ENHoOpPz2WJ8TKGLTd601Y6R9c51zlb73cfDNTKG8waRHHkAncnA3Oy3w+5L91GOpjjguY2XafSms9KV/vFqrmzsaeYchI5h6jKz3TmtL3O1kN3pDG/ucdFGfCquvl1v+orLBWVk4tchMElZEYxMwPLeV8Zz4biADjO24UtU1P77bhWUUTY34w5j255SNiCozuUeJqydJGM1ux2jMKa4iZod2XOeuLIC5oyeyt1ngMreXvjc9sqvuFG5tO5rjgNXku1Z0KfRieodT3KKlc2gZ9p6DJUU1tPxD1FXcrpwxme5P8lKslKZKktjHN3dsqG4SV0FmudRZIgG2+B8s0wbzOLmtzyMHQu8ydh6lb4cjuoI8eowKt02YPTcFb/XsE12v7Yo+vLHku/Mq+0/DO326n8OeuqKlw2BfjOFB7tX6jq26eu1TeL/AF1TX1ksVTRTtcynDQ8NaInB2XOIO+wxspXv0Fx0jdBLQXOvlo3bPgmmMhj+XNn8l6MsctfkeTTvE38YspL/AKItsby+JnK49MHdcbZBNBajDM90nKSAT1wsoaJrrRxlwLnluScYXVUWw0lG5uO36rze42qZ63ijF3E14vlA6PiBNCwSHneQGsbkuJHQLb/RHHfWGk9GWPTtPpm0R0lBSxwmHL3SvDRguc7IAJ9Atd4aZw4twzth8Utf9wjrkYz/AAUz2W15uDzVgPkk3d/kvVkzSSjBdHn0ejx5ZSlkVm6emL/S6o0lQX6ja5kVXEH+G7qw9HNPqCCFdlHHBJx/2XNhwQIqqRoHkNj/ADUjraLtJnLzQ9vJKH0wiIrGQREQBERAEREAVp1PbTeNHXK2AZdPTua0euMj9Qrsihq1RaMnFqS8GrlC1z3ieVh544eUg+bfhP8ABYPrOOrvVG+miG/Xl81LeqbR+weINbQkcsFWXVFO49MP6j6HKj4Qhl+mpanDH4dgO23xsubtqVH1jkssdy6aMO0wxsTI2EAco5cKQYImyQBpAIPZR7Yi6Op5H7Oa8tIPUEFSVbwHRtPoss35GOHoxS8aUgqKwVETDG/s9vUFU100ZFqOzxW+/RR3CKI88UmTHLEcdWvGCFI3uoe3plG0TebAYphKSfBrJKUdskR3YdGxaWtU1vsMXujZzzSyA+JLIf8AE92Sshslrlt8NSySR8rHu8TL8ZBI3G3yyspFG0O36LpqWgQ46YU5JtorjikqXRbLJHyzvyduc7eSul3b/u7+U9QqK3Yid8OOqqq+XNOckZwsUuDST+VmN2wEMmHIC4glpKoKW3XKzxNjp66odE8EyB3KQSTk5GN+pVzpwPEcGno7OyvTYGTw5LFfFNrgiSsjWHh/YqC+C92+z0VLcOYuFQG55XHu1p2afUBddbpf3us8SeWSpkc7PNJvhSb+zmOOHNX39nxMdkMA+ivOcmUhGMeIqjFbdZY6Oma0NxgdPJWq+xNbC84xss5qIQxh5Vg+q3iK3vcCcqkbcis1USL7Ozl4kNquUENPfv8A1lTI2KKK5U9U08sb2czvTbKiKxubJd5JSAXCXb1U2Wu2z3m92izxNLZ6ksiOB90HqfoN16ciuSRXSrZHe+uTYjhZbHWzhdbmSD7ScOqHf85yP0wsyXVS08dJRQ0sIxHEwRtHoBgLtXviqVHzeSbnNzfkIiKSgREQBERAEREAREQGIcQtKf6y6b56VuLjSZlpnDqT3b9f4rW68U09fKJJ2OhlZlhc0YIcPNbgKO9ecMmaj8Svs1Qyjr37va/IjlPmcdHeq8uowuXMezqaDXe0vbn14/g1PtzHU93qIZHh0jJDlw7+qka0zc0bc9FiepdJXjRetRQ3im8J07BLG8OD2yDOCQR6rILU7DGkO7dF5MserOhhmm20+DLYCDseiqQwY2CtsEpGN1cWlzm+fooTPQ0HcvKc9Vj97rmU0fLn4uwWQuxg5WF3SI1upjE4/BG0bepVJkxR32qcyOBJ6lXO7xltGHjuMhWqgfS0Vx8Gd4znI9FctSXm3spQ4OjY0Nxnm/ikaphvlGJUtxENxMchwC7Czqh5HQjA+Sj6ppIKq1OraaoikBPM18bg4A/MLOLBKKizwTd3MBVV3wK4LrydF1SgAHOF2OeOnl3VJPJhu6s2QkW+skDQfko11pVj3R7Q5ZxdKkgOwegUT6xqs078nbCnCrkZ55VFlp0pRS++NuJaXjxctaPIdVt7wQ0tJJBJrS4xFr5gYqNjuzOjn/Xp+ahvhXwR1pdHUM1zoJrXapWtmknqCA4scM/A3OSSOmcYW4lFR09vt0FDSRNiggjbHGxvRrQMAL348bcnKRzNTqksKxQffZ3oiL0nKCIiAIiIAiIgCIiAIiIAiIgIT9o20+Lpuy31kYJpKswPd/hkbt/3NH5qJbVL8Aad8hbO8R7G7UfC29WqJgfO+nMkIP8A7jPibj6jH1WptoqxJEx2+cDIPZeHVrydf0+VxcfozqCXACuUEud1YaWYOZ03VxglwF4ro6q5LnLMANv0WIXy3Vslaa2hlAe5vK9hOMjzz2Kvs9QGt9R2VBLP4jRkqW77LxaRgdFoGmju8l3gpnxXJw5XTGZxJH57qqu2j6i70bqa7s8alILXxOd8Lh8lmlO7kJcGOc0br773DPC9gB5h2RfYbbI/tekjaKU26y00NHTOAZkHt8vP1Ui2mIUNsipWknkaBnzVsL2MO/w79Cu+Osw9u/dUcmy1/ZfHy+SoKibY5XPxOZqt9ZJysJPyyhSTosd3qW4IUY3Snmu96pbZCC59TUsgaOuS5wb/ADWb3moAa7zJXbwX08dScf7SPD56a2l1xnOMgcn3M/8AO5v5L1aePyR4dVKoNm61JTspKGGmj+7ExsY+QGP5LuRF0z58IiIAiIgCIiAIiIAiIgCIiAIiIB2WnWt9PyaO4qXS0BhbSyyGqpHEbGN5zgfI5b9FuKox41aGfqrRf7UtkHPeLWDNCGjeWP8AHH65AyPUeqyzQ3xo9Oly+3O30Qfb5y5rclXdso8z81hNouRljaeb6LKKeZr27uXJmqPoYstmq7/NaKJs0VLNUNLg0+EwuIHngdlijtf1IbyRW6eMt6mRh79FIc0Mc8TmuAIPZYzV6dg5i+IgHu1wyCrY3H9x6cShfz6Mbh1lWh/PPFWHm3Dgw4C+VGuXzwFj3Vmfu48Fwzv8lfIbfbqfIqqePHoSFye20Pha1lNG4g5Bz+h816VTR1Nuk+3/AMMSdq+5MmLYKeoe3OzXDqVW2jWdwuF0ipTaathccmTlwwfMq5yWeCpnLo4I4s/3Qr3aLLTUgcGRg9y7CxyOFfyeDUvFu/xmTRSc1ExxznCtdfP8JBPzVYZRFCWhY7daoMDiXAbLGKs8UjGr/VtZFIQ7G2y2H9mbRz7Pw+qNWV0RbWXt4dFzDdtOzIZ/1Eud8sKBtFaRq+JnE2m0/DltviInuEw/BADuB6uPwj5+i3lpaanoqGGjpYmwwQsbHHGwYDGgYAHoAF0tNjpbmcbX5rexHaiIvUc0IiIAiIgCIiAIiIAiIgCIiAIiIAh6IuMj2xxOkccNaC4/IIDSLiK+m07x81JZ6aNsVOKkTMY3YN8RjXkAfNxVda68PAOfqsZ4mOqLhxfuN4myX1jWyk+XUAfQABUVruT6SRrZDlvn5Lm6iK3teTv6Sb9uLZKcMofsAchcpIvEGzd/JWe2XOOWNpDgSVfoZmuAIwV46p8nuTLa+2tfJlzAAe2F1ttEDH/2TQr8ZGkdAuuVzM5wPRapqiL5otraKCN2QwErtbysbjGFzc7G/QqhqqkNaS52AFmJHCrqG8jiDgDYqP8AVN4bBE4B4yRjGVcL7qCKna5ofl3osGkiqLrUGomzy5yAVvBKKtnnm2+EbA+x419TW6zuEvUGlib6D7QlbULUX2Wb8LLri+WOaMCC4eAGv/uSND+UfIg4+eFt0unj5gmcHUKsjQREVzEIiIAiIgCIiAIiIAiIgCIiAIiIAsJ19re02KjdYWVsb71XRYhpGHL2sceUyOH4WjfBPU9O6p+MHFWw8IeGNbqm8yxvnDTHQURdh9XOR8MbfTu49gCVq1wgp73eaUa/1ZUyVd+1HUm5VUsn4YzkRRtH4WNb0b0GVrihuZWTpFy4kWoQ6hpZmj+0h5R/yn/ysIkpHB2QFMXFK3ubRW+4tHwxS8r/AJOGP44UdvpQ8AgA/JcnXLblZ9BoJXhRYKevqLfKCS7lBWXWvUscrG5eCPQqx1VvbIwgtwVaHW18EnNC5zHeY2XnTUl8j1U4vgkr9tQkbPH5ribxDzD7QH6rAYYq5/wmcn5hcKqmromj7V2D2Sokq2Z1U3qCOMkyDOPNYheNTF/NFTuJJ22VodRVszcPlfj54VXQ2Mc4Jbn1Kjcl0Kb7LdTW6euqPFqMu36K/Ntwjp8Bo6dOwV6orYxmBy4H8VVzUoBaxjC57iGsYBu4nYBVcm2RSXCK7hfb3WiO46jeOVrKiIhx/wAB5if1W4sUsc0DJonh8b2hzXNOQQdwVrVfaBumeGUVs2M7mYkx3e45P6n9FGvsz8d6rRXE2u4KcQbm4W11W+OyVtW//wBM8uy2nc4/gcCOTPQ7dCMd+OJxxRT7Pmc2RTyykujeJERUKhERAEREAREQBERAEREARFxkljiidLK9rGNGXOccADzJQHJYvr/iBpfhpoiq1Tqy4tpKKAYa0byTv/DHG38Tz2H1OAoy4l+1lwk4eU1RTU15ZqW8x5a23Wl4kAd/jl+4wfUn0Xn1xe40av4y6wbeNSzNhpIMtobZAT4FK09cd3OPdx3PoNlZR+wVXFXipqDjjxdF3vD5IKF0zaa324Pyykhc8DA7F56ud3PoAt3rNa4qHwaKGMMjhjEbGgYwGgAD8gvObTbw3Vlue84a2rhcfkJGlenDYRHegQPhyR88r04fJnMqbtZ4r/o+ahlAJcwgHyPYqEm00sE8lJO3llhcWPb6hbD29nI7kI2KwTiDpCWGodqC2xFxx/vEQH3mjuPUfwXi9Q0++O6PaOh6dqFCWyXTIxkpcHdp+q6XUQPVuQeoKv0TIZoxIPLdd7beHnbG575XCs77f2Y3FQcjwWDHoVU1FAahwy0NAH5q/wD7PH3Qwkrujt72uJLMeinkjrkxY2sN2awkhVdHbW7OI+ZV8dSYOXDI+S7IoMM3GN0ITbLe6KOFhIGDjr3KyLh7p91zvLr7VsPutGcRc3R8mOv0/iqCitFXqC8xWuibgvOXvxtG0dXH+typZlo6ayWKG1UDeWKJnL6nzJ9SuhoNPvlvfSOfr9T7cNke3/Rgmqua73yKnAzGx3RaYe07ZI7Txe8WKPkNRRxyuI8wS3P6D8lvDBTNNy8RwGc53WontfPp3cRbbyf2ot5D/wD7Dj+a7eT8TgR7JV9mL2wbf+yqTQHFu6+7zwgRUF/qXfBI3oI6h3Zw6B52I64O53dgnhqqaOoppo5oZGh7JI3BzXtO4II2IPmvC85B+Sn3gJ7VmseDTmWSvjk1BpQu3tssmJKXfc07z939w/CfTqvK1Zr0eq6KN+HHHjhdxTo4XaU1TSPrXsDnWyqcIKqM92mN25x5tyPVSQqtUTYREUAIiIAi1o1t7cfBbS4fDYqq4arqm9G22Hkhz5GWTA/IFa2609vjipe3ywaRtVo0zTOyGSeGauoA/ef8IPyapoHpO97I4y97g1oGS4nAA+ai/XftF8HOHcTxf9b2+Sqb0obe/wB7nJ8uSPOPqQvK7VHFvijrbmZqjXd+ucT+sElW5sX/AENw39FikVNvzO/IKdoN3td/6QSuqHTUfDTRbIWbtZcb0/md+8IWHA+ritaNc8a+KfEeRzdX60uNXTOOfcoHeBTN/wDjZgH65UeueQ4Rwty4+XZdjWlowcn1KsDuYMNx2R5AHXcrraSCuQ3f1QFXb3+BVtmH4CHfluvUemlZXUVrr4t21NNFMCO4LAf5ryyikxUsb+Enf1XpLwZuTr7wH0hXvdzyMomwPPrGSz/8hbYjOZJ0TeUMd0IV0dG2ppTGQDkbgqgYPsG+eV3U9QWTMZnLicYV2rIXBFuptKSWWtkuFBGfc3HmliaP7M+Y/wAP8PkqCmDJIwWnYjrlTbX0bZYiSwOBG4UXag0vUUEz6u0/FC45fTg4Lf3f8lx9Xo+d+NHb0etTqGR/7La2nAGRlfXMDWnbqOiooq95PIWnmGxB6gqoNSHN5ndVzDpy5KeRhJJOwXGnp6muq46KjhMsshw1o7+p9FU0lHW3evbSUUJfI78mjzJ7BSrprTFHYKTO0tU8faTEbn0HkF6tPpZZnfg8up1UcEa7kcNN6bp9NWYjIkqpfimm/vHyHkB5KkrpDPO7y6LJaoiSPkaVi9dG6nl9F38cFFbUfO5Jub3S7LNUj3bmfjbzWhntG3sXzjRco4yHMoo46QEHOXNGXfq4/kt59R3OKks8s8jgGxRukcT5NGT/AAXmtfrjJdr7W3OYkyVc75nE9+ZxP81OV0isOzD5AWuI7rizqR1Vxq6fIMjB81bGOLZx6Fec0KqKaWmlZNC9zHsOQ5pwQfMEdFN+g/ao4z6Gjhp6PVkt2t8YAFHeG+9MDfIOPxt+jlB0jgXuLRgE7BcqN5LjER6hBR6C6E9vrTlc5lLxD0nVWl52Nban+8w/WN2HtHy5ls5o7ifw/wCIFG2o0fq213bmGTFBOBK396M4cPqF40jIP+S7aeqqaGsjq6Oplp52HmZNC8se0+jhuEaTB7fIvKvQvtZ8atEckI1Mb/RNwPdL233jAHYSZDx+a2c0L7emhrs2Gl11p64afqDgPqqX/e6bPnth7R9Cq7WLPOIQnIyu1kAz0VQGgdlzDRhWJOprGtdlfXkiPOThdrW+a4lnO/HYICljge+TxA9zTnYg4VQal8G1S3nZ/faNx8wqjkDW7BUVQTI/wmbk9kBWAxSwiSN4IPcL60Z2dsFS0sHu7m9Rz9QqxAcZPhmjcPNb7+yJeG3HgjUWx7svt1wkYB5NkaHj9eZaDzj4QR5ra72N9Stpb7qLTr3b1VPFVxDzMZLXfo8fkr43yVl0biS1QYeQH7u5Vfa6Z7pBVSjcjYeSs8YjZNJV1EjWRN3LnHAA8yu39t1NdF4NlAY3p47hufkO31WzZRIqtXcQNF6DoGVWsNSUFqbJ/Zsnk+0l/dYMud88YWBVvFuC8x40npaquET92VdS8RRuHmGtySPyULcY+EdHaNQ3PiDfWXG7Ulzla2tqhI51RawQGtfGM8r4s4BY4ZGRgqJax2r9BQQUNDfq+G0zAzUFTb6qRtPUMO/M0g7Hzb1BWkcO5XZG+nRt1Da7xfo3VFTTW+nncNnQB7Sz0cDuVaquCOz1EcWorlR2qN3/ABqiTAPyWp8mtdXTTsmm1Ne5ZGHLHurpSR8viWcxajh4gWiK3Vt8qbNqONvLDUGZwgq8/hdv8JP8emeizfpcM0rb5/s2XqWTBGl1/RuRoyp0nNQeHpy8224OO73UtSyR5PqAcrJKguGzTgjsV5pXOmv+nry6luLqilrIcFrg8g47Oa4dR6hZ5o72ntbaPqIqa91r9QWxuGugrTzStb/gl+9n0dkLT9M4KjF5VP5Xdm9LZy1p5wAQsdvla1zeVgyemypNP6ttmr9PU10tskjI6iFszYpRyu5SMgjz6r5JG41PLI3LXH8lVKiGQ9x3vEtj4JXiq8QsmqWNo4vnIcH/ALeZaHyu+PH6Lbn2wLxFBZdO6eik+OWWWse0H8LQGNz9XO/Jahyfeyscr5o0h0fCRy7hUFVSxOy+MgOG+yqzzeYwvj28zO2D1CyLltdMxmBHGZX9wOg+ZXZTMldIJZC1vk1q7PCEPwgANHovrDyu2OyAqR0JwPyXzlA3IRp381yIz0QHVgjomT3XLfCYHUhAf//Z" alt="林老师" data-page-node-id="CjTZxr2MBkGnw6v9LEcjnu"></div>
     <h1 data-page-node-id="11cSq2isokLi6WWhajuiBh">林老师</h1>
-    <div class="sub" data-page-node-id="AEm1XELWpexMdiwc2unRZZ">帮孩子“听得懂、会做题、敢拿分”</div>
+    <div class="sub" data-page-node-id="AEm1XELWpexMdiwc2unRZZ">「听懂」到「会做」，差的是练法</div>
     <div class="tag" data-page-node-id="Toz3tdt28FAO7EsCqMPD1i">清华大学联合培养 · 硕士 · 4 年一线提分经验</div>
     <div class="tsinghua" data-page-node-id="cUOuyzGypgqs7kwbXKYUNy">硕士毕业于双一流院校，并获清华大学 3 年联合培养——把名校的严谨思维带进每一节课</div>
     <div class="target" data-page-node-id="UFoHUzI9lfaIKWCWKNuZ4Z">🎯 招生对象：小学 · 初中（数学/物理/化学）· 高中（物理）</div>
   </header>
 
   <div class="quick-bar" data-page-node-id="W8B5q26BigkJifqXjN4jP4">
-    <div data-page-node-id="exULMhtiGVbudxljNYbKmQ"><b data-page-node-id="bodQCz8MlRp9PzcrL0uONu">3 年</b><span data-page-node-id="E7aRhQHCBkNmWxyEoxenzS">清华联合培养</span></div>
-    <div data-page-node-id="37RzapfizkvHFSBbWD7M7v"><b data-page-node-id="u6YKG9cAa4dvvzx0wDmCeT">4 年</b><span data-page-node-id="TrHe964uG3b783kWWG5GQf">一线提分经验</span></div>
-    <div data-page-node-id="vA1GZG7Yqa92Gbhqy27JJr"><b data-page-node-id="x9TuAQwKBlJLSFl7q6CAi5">数学·理化</b><span data-page-node-id="FfjEEBrwQCRg6UwBVhcRwy">三科精讲</span></div>
+    <div data-page-node-id="exULMhtiGVbudxljNYbKmQ"><b>65 张</b><span>自绘讲义图</span></div>
+    <div data-page-node-id="37RzapfizkvHFSBbWD7M7v"><b>6 份</b><span>每课材料</span></div>
+    <div data-page-node-id="vA1GZG7Yqa92Gbhqy27JJr"><b>74 张</b><span>知识图谱</span></div>
+  </div>
+
+  <!-- v2:thesis -->
+  <div class="thesis">
+    <b>90% 的补课，停在「听懂」这一步。</b>
+    <p>孩子点头、家长放心、考试照错。我做的事很窄：把<em>已经听懂的东西</em>，练到考场上能自己拿出来。</p>
   </div>
 
   <section data-page-node-id="9e2RbJLEXMHpiO2qgtylNg">
@@ -318,6 +409,54 @@
         <li data-page-node-id="iDvU5CseEXXSBlX0jKNOxP"><b data-page-node-id="SYTWUKF3SgcVTU9IsWDR6o">刷题不少，分数却原地踏步：</b>缺的不是题量，是题型方法和错题复盘。</li>
       </ul>
     </div>
+  </section>
+
+  <!-- v2:demo -->
+  <section id="demo">
+    <div class="sec-title"><span class="dot"></span>一道题，看我怎么教<small>真题 · 真错法 · 真口诀</small></div>
+    <p class="lead">不用听我讲方法多好。下面三道题，你先看学生怎么错，再看我怎么判——看完你就知道差别在哪。</p>
+
+    <div class="demo">
+      <span class="dtag">物理 · 高一 · 刹车陷阱</span>
+      <div class="q">汽车以 20 m/s 行驶，刹车加速度大小 5 m/s²，求 10 s 内的位移。</div>
+      <div class="wrong"><b>多数学生会这样错：</b>直接代 x = v₀t + ½at² = 20×10 − 2.5×100 = <b>−50 m</b>。算出个负数，也不知道错在哪。</div>
+      <ol>
+        <li>先算它什么时候停：t<sub>停</sub> = v₀/|a| = 20/5 = <b>4 s</b></li>
+        <li>4 s &lt; 10 s → 车 4 秒就停了，后 6 秒位移是 0，不能按 10 秒算</li>
+        <li>用 x = v₀²/(2|a|) = 400/10 = <b>40 m</b></li>
+      </ol>
+      <div class="key">先问「它停了吗」，再问「走了多远」</div>
+      <div class="src">出处：月考查漏补缺讲义 第 8 题（sympy 复核 400/10 = 40 ✓）</div>
+    </div>
+
+    <div class="demo">
+      <span class="dtag">物理 · 高一 · 摩擦力</span>
+      <div class="q">重 100 N 的箱子放在水平桌面，动摩擦因数 μ = 0.2，用 10 N 的水平力拉它，摩擦力多大？</div>
+      <div class="wrong"><b>多数学生会这样错：</b>f = μF<sub>N</sub> = 0.2 × 100 = <b>20 N</b>。公式没错，但用错了地方——箱子根本没动。</div>
+      <ol>
+        <li>先算最大静摩擦：f<sub>max</sub> ≈ μF<sub>N</sub> = 20 N</li>
+        <li>10 N &lt; 20 N → 拉不动，箱子静止，这是静摩擦，不是滑动摩擦</li>
+        <li>静摩擦「要多少给多少」→ f = <b>10 N</b></li>
+      </ol>
+      <div class="key">先判状态，再定方向，最后算大小</div>
+      <div class="src">出处：第 04–06 讲 能力进阶 · 方法思路笔记 第二章</div>
+    </div>
+
+    <div class="demo">
+      <span class="dtag">数学 · 六年级 · 单位「1」</span>
+      <div class="q">一本书 120 页，读了 1/4，还剩多少页？</div>
+      <div class="wrong"><b>多数学生会这样错：</b>120 × 1/4 = 30，答「还剩 30 页」。算得没错，但答的是「读了多少」。</div>
+      <ol>
+        <li>圈出分率句：1/4</li>
+        <li>「的」字前面是单位「1」→ 全书 120 页</li>
+        <li>写关系式：剩下 = 120 × (1 − 1/4) = <b>90 页</b></li>
+        <li>回代检验：读的 30 + 剩的 90 = 120 ✓</li>
+      </ol>
+      <div class="key">「的」前「比」后找标准；先写关系式，再算不迷糊</div>
+      <div class="src">出处：六年级第 1 课《单位 1 与应用题拆解》四步卡</div>
+    </div>
+
+    <div class="track">三道题均出自真实讲义 · 学生姓名与学校已脱敏</div>
   </section>
 
   <div class="hook-card" data-page-node-id="AmeXv3Rnsy8li3DFV6ZHmX">
@@ -364,8 +503,8 @@
       <div class="svc-item" data-page-node-id="cHQCLxpaXbFAdsNgub2ev0"><b data-page-node-id="qXUdUepPNNdWOCmQGg5lVH">上课形式</b><span data-page-node-id="DGZz5U9pAICogeiyEqd6Cr">一对一 / 小班（3-5人）</span></div>
       <div class="svc-item" data-page-node-id="w290iogCyQ6bjSZ3BfLpE8"><b data-page-node-id="6BjDiaxDFfsXb0JCs04NNa">是否试听</b><span data-page-node-id="eOZjPhEuv8O7HrgNoYM43H">首次试听享半价（小学90/初中125/高中160元），满意再正式报名</span></div>
       <div class="svc-item" data-page-node-id="xvFBxMb9MFrofHeS9nKvCB"><b data-page-node-id="WlSF34nEdAVTOQ7W1hGPHm">收费方式</b><span data-page-node-id="QGlGHF9bvDPq52hDwnLFZZ">详见下方「课程定价」</span></div>
-      <div class="svc-item" data-page-node-id="IpO6EDOYBooC5vG4wvuwRH"><b data-page-node-id="hLPWIT9x4eZxoJXvY2l1fm">授课方式</b><span data-page-node-id="kzFeApxFGne6c9D7udZkf2">线上为主，通州临河里及周边可线下</span></div>
-      <div class="svc-item" data-page-node-id="a62aKBbGsVhDHpnTUMhzp4"><b data-page-node-id="aGtSNcAPdDmlFvOz2GfaCj">可约区域</b><span data-page-node-id="aXNffAjJDC5tepiUrAaQGA">通州临河里周边线下，其他区域线上</span></div>
+      <div class="svc-item" data-page-node-id="IpO6EDOYBooC5vG4wvuwRH"><b data-page-node-id="hLPWIT9x4eZxoJXvY2l1fm">授课方式</b><span data-page-node-id="kzFeApxFGne6c9D7udZkf2">线上为主，通州及周边可线下</span></div>
+      <div class="svc-item" data-page-node-id="a62aKBbGsVhDHpnTUMhzp4"><b data-page-node-id="aGtSNcAPdDmlFvOz2GfaCj">可约区域</b><span data-page-node-id="aXNffAjJDC5tepiUrAaQGA">通州周边线下，其他区域线上</span></div>
       <div class="svc-item" data-page-node-id="LEdpMyy7Ps6fKOkiM871gg"><b data-page-node-id="k4UdaHQchDhbh420tcik67">排课时间</b><span data-page-node-id="y6eVXsDpfw3SmYu16HvChw">工作日晚上 / 周末全天，可沟通</span></div>
     </div>
   </section>
@@ -417,44 +556,135 @@
   <section data-page-node-id="XmxiTSa1fagGxpURgsExWj">
     <div class="sec-title" data-page-node-id="P7GB1ELA1c2rODS9smL3CQ"><span class="dot" data-page-node-id="iQazYLUHiAKwqVesZhpFVJ"></span>四步提分闭环<small data-page-node-id="vjsG7gmd3lXE9awNiNMjCe">从诊断到稳定输出</small></div>
     <div class="steps" data-page-node-id="H7NHVNPvSAMBoSKzTSHJ1D">
-      <div class="step" data-page-node-id="XIl0qwrNbjVMpSs4I4SxoO"><h4 data-page-node-id="apWKYtMVAi0uGAivshb7ob">学科诊断</h4><p data-page-node-id="58oECB79prYjK1hkMcXHS4">先找出知识漏洞、思维卡点、失分题型，不盲目开课。</p></div>
-      <div class="step" data-page-node-id="hOoBdFJAuUIouUCnsTytI7"><h4 data-page-node-id="cS8Up7q76Aag0p0q4C1Bmr">方法输入</h4><p data-page-node-id="UKSaap2hpClDM9CURVJkrD">针对薄弱环节讲透原理，建立解题模型和答题规范。</p></div>
-      <div class="step" data-page-node-id="SPIJ794nxxHw1guWmvW24M"><h4 data-page-node-id="b4RE04NrDZgPGsDRoBFQ3k">刻意训练</h4><p data-page-node-id="VycmuxlAOW0MenM04r5HSR">精选北京真题/模拟题，限时训练，把方法练成条件反射。</p></div>
-      <div class="step" data-page-node-id="2ooujHM0gBgs6CWwCePAFW"><h4 data-page-node-id="FUok7DzepUHZhEb2omjigy">复盘反馈</h4><p data-page-node-id="404wfL68PPAxfFHv4eAjUv">错题归档、阶段测评、及时向家长反馈进度，形成正循环。</p></div>
+      <div class="step" data-page-node-id="XIl0qwrNbjVMpSs4I4SxoO"><h4 data-page-node-id="apWKYtMVAi0uGAivshb7ob">学科诊断</h4><p data-page-node-id="58oECB79prYjK1hkMcXHS4">先找出知识漏洞、思维卡点、失分题型，不盲目开课。例：把一份 50 分试卷逐题拆到题号，定位 6 处失分。</p></div>
+      <div class="step" data-page-node-id="hOoBdFJAuUIouUCnsTytI7"><h4 data-page-node-id="cS8Up7q76Aag0p0q4C1Bmr">方法输入</h4><p data-page-node-id="UKSaap2hpClDM9CURVJkrD">针对薄弱环节讲透原理，建立解题模型和答题规范。例：受力题按"摩擦三步 / 叠加体 / 合成分解 / 平衡求力"四类动作拆解。</p></div>
+      <div class="step" data-page-node-id="SPIJ794nxxHw1guWmvW24M"><h4 data-page-node-id="b4RE04NrDZgPGsDRoBFQ3k">刻意训练</h4><p data-page-node-id="VycmuxlAOW0MenM04r5HSR">精选北京真题 / 模拟题，限时训练，把方法练成条件反射。例：同类变式卷 + 各区真题限时练。</p></div>
+      <div class="step" data-page-node-id="2ooujHM0gBgs6CWwCePAFW"><h4 data-page-node-id="FUok7DzepUHZhEb2omjigy">复盘反馈</h4><p data-page-node-id="404wfL68PPAxfFHv4eAjUv">错题归档、阶段测评、及时向家长反馈进度，形成正循环。例：每课微信反馈 + 错题进档案定期回炉。</p></div>
     </div>
   </section>
 
+  <!-- v2:deliver -->
+  <section id="deliver">
+    <div class="sec-title"><span class="dot"></span>一节课，带走 6 样东西<small>不是一张卷子</small></div>
+    <p class="lead">上面那条闭环不是口号，它落成纸面就是下面这 6 份材料。每节课都有，全部留档。</p>
+    <div class="deliver">
+      <div class="dv"><div class="n">01</div><h4>备课计划</h4><p>这节课讲什么、讲到哪、留多少练习，开课前就定好。</p></div>
+      <div class="dv"><div class="n">02</div><h4>上课讲义</h4><p>彩色图文，每个易错点配示意图——全站 65 张图都是自己画的。</p></div>
+      <div class="dv"><div class="n">03</div><h4>学生练习</h4><p>分层设计：课上练一遍，课后带回去再做一遍。</p></div>
+      <div class="dv"><div class="n">04</div><h4>答案与解析</h4><p>每题给思路和易错提醒，不只给一个答案。</p></div>
+      <div class="dv"><div class="n">05</div><h4>速查卡 / 四步卡</h4><p>一页纸装下一个专题的口诀和流程，考前能翻。</p></div>
+      <div class="dv"><div class="n">06</div><h4>课后反馈</h4><p>当天微信发家长：讲了什么、掌握到哪、下次做什么。</p></div>
+    </div>
+    <div class="track">机构大班一节课给你一张卷子 · 这里一节课 6 份，全部留档</div>
+  </section>
+
+  <!-- v2:diagnose -->
+  <section id="diagnose">
+    <div class="sec-title"><span class="dot"></span>诊断报告长什么样<small>真实节选 · 已脱敏</small></div>
+    <p class="lead">别的诊断写「基础薄弱、需加强训练」。这份写的是——每一分丢在哪道题、为什么丢。</p>
+    <div class="tablebox">
+      <table class="dtable">
+        <tr><th>题号</th><th>类型</th><th>可见问题</th><th style="text-align:right">失分</th></tr>
+        <tr><td class="no">单选 4</td><td>概念</td><td>加速度方向与速度方向的关系判断错</td><td class="lo">−4</td></tr>
+        <tr><td class="no">实验 12</td><td>实验</td><td>纸带逐差法公式书写不规范</td><td class="lo">−8</td></tr>
+        <tr><td class="no">13</td><td>解答</td><td>追及相遇 / 多阶段运动，过程列式丢分</td><td class="lo">−4</td></tr>
+        <tr><td class="no">14</td><td>解答</td><td>多阶段运动，分段处理不严谨</td><td class="lo">−4</td></tr>
+        <tr><td class="no">15</td><td>解答</td><td>v-t 图像分段，斜率 / 面积应用不熟</td><td class="lo">−8</td></tr>
+        <tr><td class="no">16</td><td>解答</td><td>多过程综合压轴（滑块 + 斜面），思路混乱</td><td class="lo">−13</td></tr>
+      </table>
+    </div>
+    <div class="concl"><b>可见失分合计 41 分，实际得分 50。</b>六处失分指向同一个根因：运动学综合 + 实验。不是知识盲区，是「学过，考场上拿不出来」。</div>
+    <div class="track">同一份诊断里三科一起拆：物理 50 / 化学 79 / 数学 121 · 先打头号短板</div>
+  </section>
+
+      <section data-page-node-id="fb-sample-sec">
+    <div class="sec-title"><span class="dot"></span>课后反馈示例<small>每课向家长同步，脱敏展示</small></div>
+    <div class="fb-sample">
+      <div class="fb-h">— 林老师发给琪同学家长的课后反馈（节选）—</div>
+      琪同学家长，第六次课（方差）上完了，跟您反馈一下今天课上暴露的问题。其实还是那几个老问题，重点说两点：<br><br>
+      1. <b>熟练度还是欠火候，复习得跟上。</b>课堂这两小时效果是不错的，她一听就懂；但光靠上课、课后不复习，到下周就容易回生。<br>
+      2. <b>计算这块还得盯。</b>方差这一章数据量大，特别容易算错。后面我会继续关注她的计算习惯、书写规范，还有读题的仔细程度。<br><br>
+      她底子不差，就是"练得不够、课后没收住"。复习抓起来、计算习惯养好，能稳上来，咱们一起盯，继续加油。
+    </div>
+  </section>
+  <!-- v2:portrait -->
+  <section id="portrait">
+    <div class="sec-title"><span class="dot"></span>你家孩子是哪种<small>先对号，再看案例</small></div>
+    <p class="lead">补课前我最想确认的不是分数，是类型。类型不同，补法完全相反。</p>
+
+    <div class="pf">
+      <div class="ph"><span class="pt">A 型</span><span class="pn">单科塌方</span></div>
+      <div class="pd"><span class="lb">你会看到</span>某一科突然掉下去，其他科还行，孩子自己也说「不知道为什么会错」。</div>
+      <div class="act"><b>真实案例：</b>杨同学 · 物理 50 / 化学 79 / 数学 121。<br><b>我的做法：</b><span class="hi">补考场提取，不补新课</span>——重做错题 + 同类题闭环，而不是把课本再讲一遍。</div>
+    </div>
+
+    <div class="pf">
+      <div class="ph"><span class="pt">B 型</span><span class="pn">听懂就过</span></div>
+      <div class="pd"><span class="lb">你会看到</span>上课点头、作业会写，一考就掉分；一问都说会，一看卷子全是「不该错的」。</div>
+      <div class="act"><b>真实案例：</b>琪同学 · 初三物理，练过套路的题全对，概念辨析题连丢 4 道。<br><b>我的做法：</b><span class="hi">建练习闭环 + 话术清单</span>——把「听懂」按天拆成可检验的小动作。</div>
+    </div>
+
+    <div class="pf">
+      <div class="ph"><span class="pt">C 型</span><span class="pn">算得快，读不懂</span></div>
+      <div class="pd"><span class="lb">你会看到</span>计算又准又快，一碰应用题就卡；不是不会算，是不知道题目在问什么。</div>
+      <div class="act"><b>真实案例：</b>宇同学 · 六年级数学，卡在「单位 1」和数量关系式。<br><b>我的做法：</b><span class="hi">补「文字→关系式」的翻译</span>——四步卡固定流程，8 课搭成体系。</div>
+    </div>
+
+    <div class="track">三种类型教学动作完全不同：A 补提取、B 补闭环、C 补翻译 · 这也是我不接「统一进度班」的原因</div>
+  </section>
+
   <section data-page-node-id="ut8zskzISvKBcFq209J8vJ">
-    <div class="sec-title" data-page-node-id="ArGwIIaw6goLCyPBmxVQ0Y"><span class="dot" data-page-node-id="PTOP0ycHXWlcvQl0q0hh1t"></span>真实提分案例<small data-page-node-id="KxlHPC4a9p3yiBjmTljABX">效果看得见</small></div>
-    <div class="case" data-page-node-id="Fr5G8vDGFL1GKXEUNCkdaT">
-      <div class="head" data-page-node-id="Y1FgamiwzXBnupkaTzjUQi"><span class="tag-pill" data-page-node-id="z7HgzGRyDnBNYVzkQCcYDR">案例 1</span><span class="title" data-page-node-id="OrG4ZGlQfkrTdFqVXxx1Gu">初二数学（几何/函数）</span></div>
-      <div style="font-size:13px;color:var(--muted);margin-bottom:8px;" data-page-node-id="L8ozeCXKsoEqrTWedRw4ER">几何没思路、函数图像看不懂，大题拿不到分，期中不及格</div>
-      <div class="bar" data-page-node-id="TqmPQqUmM8ZFXkkXE1WRX1"><i style="width:88%" data-page-node-id="UywHCUJGq3Piob5XAuCtlN"></i></div>
-      <div class="result" data-page-node-id="V6XUFtxL13eBIw2ih1xAtB"><span data-page-node-id="rZka57baDiiyEWFQNHspJp">辅导前 <b data-page-node-id="creb5t2GUgRrwEkLyj5C23">60 分左右</b></span><span data-page-node-id="7n2tV8m7VjHKcMEaGYyCAp">期末稳定 <b style="color:var(--accent)" data-page-node-id="aF9B0qqG1bpqqdRWWLoW9d">85+ 分</b></span></div>
-      <div class="desc" data-page-node-id="3vHab63qSqX0KLtqdMfDyo">从几何辅助线思路与函数数形结合入手，一学期期末稳定 85+ 分。</div>
+    <div class="sec-title"><span class="dot"></span>真实提分案例<small>诊断式教学，效果看得见</small></div>
+
+    <div class="case case-real">
+      <div class="head"><span class="tag-pill">案例 · 高一</span><span class="title">杨同学</span></div>
+      <div class="cmeta">高一阶段性测试：物理 <b class="lo">50</b> / 化学 79 / 数学 121（物理为三科头号短板，但多数失分是"学过没用出来"）</div>
+      <div class="cblock"><span class="ct">诊断</span>把 50 分的物理卷逐题拆到题号：单选 4（加速度方向）、实验 12（纸带逐差法）、15/16（多过程综合）…… 失分集中在运动学综合 + 实验；国庆补过的"逐差法""Nₐ 陷阱"考场上仍错——属于"听懂没练熟"，不是知识盲区。</div>
+      <div class="cblock"><span class="ct">我的做法</span>不重讲新课，按"错题重做 → 同类题闭环"推进；多过程题强制先画过程图再列式；Nₐ 陷阱做成 6 条检查清单逐题打勾。</div>
+      <div class="cblock"><span class="ct">配套产物</span>期中"逐题详解 + 方法思路笔记"双件套、9 张彩色 SVG 讲义、Nₐ 六陷阱清单。</div>
     </div>
-    <div class="case" data-page-node-id="GWb1sNxxjjTMnHxSst0ef1">
-      <div class="head" data-page-node-id="kb1Mil5yrg8GFsvadiHI5K"><span class="tag-pill" data-page-node-id="BVqSlZDcACVEnuHBOPwSlI">案例 2</span><span class="title" data-page-node-id="TwErV6S3eEZCDkR3qGynwU">小学五年级数学</span></div>
-      <div style="font-size:13px;color:var(--muted);margin-bottom:8px;" data-page-node-id="shRyz86A6EGlAHGSKwxrOR">计算粗心、应用题读不懂，对数学有畏难情绪，成绩中等偏下</div>
-      <div class="bar" data-page-node-id="GGScPhKD847F55IkutdVgZ"><i style="width:86%" data-page-node-id="ryLsi3WC45ToxDLCg23nT1"></i></div>
-      <div class="result" data-page-node-id="HV2PavY9xDaAx0bzD7xNR5"><span data-page-node-id="vOONY4EKMITx3H8TJsrQir">辅导前 <b data-page-node-id="QDryISPv3U3r89GV0ryiSY">70 分左右</b></span><span data-page-node-id="Ltrysg59C4cMhKKUJJEdu7">期末稳定 <b style="color:var(--accent)" data-page-node-id="cDEqgnOlkrwKWNEf4BjGbg">92+ 分</b></span></div>
-      <div class="desc" data-page-node-id="IPKUVRfd8b9QBTp2TiRyrt">从计算习惯和读题方法入手，半年内期末稳定 90+ 分，孩子不再怕数学。</div>
+
+    <div class="case case-real">
+      <div class="head"><span class="tag-pill">案例 · 初三</span><span class="title">琪同学（初三物理）</span></div>
+      <div class="cmeta">9 月月考：电流方向 / 串联"送分题"丢分，比热容实验单题 −5</div>
+      <div class="cblock"><span class="ct">诊断</span>逐题定位失分：第 8/9 题（电流方向规定、串联电流相等）这类概念题丢分最冤；第 25 题比热容实验 −5 是全卷单题最大失分；实验题标准表述（验电器原理）写不准。</div>
+      <div class="cblock"><span class="ct">关键发现</span>凡课上练过套路的都拿了分（比热容计算、电表读数、图像题全对）——印证"听懂了没练熟"。孩子学物理的主动性也比数学更足，这科有冲劲。</div>
+      <div class="cblock"><span class="ct">配套</span>每课微信课后反馈（讲了什么 / 掌握到哪 / 下次做什么）+ 概念对比卡 + 实验话术清单。</div>
     </div>
-    <div class="case" data-page-node-id="UpEF99jDjXkFOkb6oavwII">
-      <div class="head" data-page-node-id="qhyLW8cNh3GmzFa1qvtMYV"><span class="tag-pill" data-page-node-id="mmGy7hFYLpCkxzZvmcaUNk">案例 3</span><span class="title" data-page-node-id="EWIOycfieFooGnz5pCeW8p">初三物理辅导</span></div>
-      <div style="font-size:13px;color:var(--muted);margin-bottom:8px;" data-page-node-id="k64XSljvIay8YgJsOd0i50">基础薄弱，公式理解不透，实验题和综合题丢分严重</div>
-      <div class="bar" data-page-node-id="WtMp5McCeTnpeyoMaAUflz"><i style="width:90%" data-page-node-id="1CqJ0hFWVJxVWF1I9kAAYK"></i></div>
-      <div class="result" data-page-node-id="qCgwGydWykUGOwT2qLnKUp"><span data-page-node-id="GssIzZTB8wYjHO3eFXBIUg">辅导前 <b data-page-node-id="vI8POEHbNQaEVYnm47sjUC">45-55 分</b></span><span data-page-node-id="mN3A1gp45B9CcDX98I2PEQ">辅导后稳定 <b style="color:var(--accent)" data-page-node-id="unj5UIhtHZXFM4NAr53swl">85-95 分</b></span></div>
-      <div class="desc" data-page-node-id="kDFvbw9i2CqvubC17GRUwF">3 个月后成绩稳定提升，中考物理稳定 90+ 分。</div>
+
+    <div class="case case-real">
+      <div class="head"><span class="tag-pill">案例 · 六年级</span><span class="title">宇同学（六年级数学）</span></div>
+      <div class="cmeta">应用题"单位 1"理解不到位，拆题写关系式习惯没形成</div>
+      <div class="cblock"><span class="ct">诊断</span>计算能力强、基础扎实，短板是应用题——单位"1"抽象、不会把文字转成数量关系式。</div>
+      <div class="cblock"><span class="ct">我的做法</span>8 课搭建"单位 1 拆解"体系（差量对应、比的应用、分数乘除、圆与组合图形……），每课配备课计划 + 学生练习 + 四步卡 + 答案解析 + 动画。</div>
+      <div class="cblock"><span class="ct">配套</span>五件套闭环材料，应用题从"抽象不会"到"会拆关系式"。</div>
     </div>
-    <div class="case" data-page-node-id="01227bYDAu5BblQ69qzd0M">
-      <div class="head" data-page-node-id="Wlk7jQgnDLvImMj01Yenve"><span class="tag-pill" data-page-node-id="FPsGRNswkRHcEBWMkQrJXF">案例 4</span><span class="title" data-page-node-id="XyvQpWbZNiew05Ay7l5wFI">初三化学辅导</span></div>
-      <div style="font-size:13px;color:var(--muted);margin-bottom:8px;" data-page-node-id="8Iv4c1b57WFX1Rc3jF8piT">方程式记了忘、实验题不会，期中刚及格，对化学没信心</div>
-      <div class="bar" data-page-node-id="8MdYKsWa1S1CwhIzOZFuNO"><i style="width:85%" data-page-node-id="0LWF9iD34hLF7S20M1iMpO"></i></div>
-      <div class="result" data-page-node-id="tfDvfaZED1hGPjYU0qULed"><span data-page-node-id="xwQrBX0FxBEasl1WKYNiu7">辅导前 <b data-page-node-id="3uAMckMCeEF9OFfnCHte7l">65 分左右</b></span><span data-page-node-id="r08VkZYkRwR5HLGSm3PKSC">期末稳定 <b style="color:var(--accent)" data-page-node-id="o8UEEUJzg2tymEEuvWHIjE">88+ 分</b></span></div>
-      <div class="desc" data-page-node-id="9LWSIf6Sl2sLUDBbLihmyp">用理科逻辑教化学，从原理推导代替死记硬背，建立知识网络，期末稳定 88+ 分。</div>
+
+    <div class="track">以上案例均来自真实上课与诊断记录，姓名与地区已脱敏展示</div>
+  </section>
+
+  <!-- v2:notdo -->
+  <section id="notdo">
+    <div class="sec-title"><span class="dot"></span>我不做的四件事<small>比承诺更可信</small></div>
+    <div class="notdo">
+      <div class="ni">
+        <h4>不重讲一遍</h4>
+        <p>杨同学国庆刚补过「逐差法」，月考照样错。<b>再讲一遍不会让他会，重做 + 同类闭环才会。</b>所以我从不靠「多上几节」解决问题。</p>
+      </div>
+      <div class="ni">
+        <h4>不刷题海</h4>
+        <p>一份卷子做三遍，比三份卷子各做一遍有用。<b>我给的是变式，不是题量。</b>练完能讲出「这题在考哪个动作」，才算过。</p>
+      </div>
+      <div class="ni">
+        <h4>不承诺分数</h4>
+        <p>谁都能说「包提 30 分」。<b>我只承诺三件可查的事：</b>每节课有材料、每次课后有反馈、每道错题有归档。</p>
+      </div>
+      <div class="ni">
+        <h4>不用通用讲义</h4>
+        <p>北京版 / 北师大版 / 人教 A / 苏教版 / 人教版——<b>你孩子用哪版，我按哪版备课。</b>教材版本对不上，讲得再好也白讲。</p>
+      </div>
     </div>
-    <div class="track" data-page-node-id="Iin2EyrVvV6O55PppEcTie">已累计辅导 <b data-page-node-id="M8muMdILwgSqSpYUB7k3z5">50+</b> 名学生 · 家长续费率 <b data-page-node-id="xMAYM5noceNiGZPS0XJwRS">90%</b></div>
+    <div class="track">这些话不好听，但能省掉你两次试错的学费</div>
   </section>
 
   <div class="hook-card scarcity" data-page-node-id="Q2Z8ctKbTBiwAMoEnDkkWj">
@@ -494,6 +724,36 @@
     </div>
   </section>
 
+    <section data-page-node-id="gallery-sec">
+    <div class="sec-title"><span class="dot"></span>讲义与知识图谱<small>按你孩子的教材版本备课</small></div>
+    <div class="gallery">
+      <div class="gimg"><img src="gallery/junior-ohm-1.jpg" alt="欧姆定律知识图谱"><span>欧姆定律 · 初中</span></div>
+      <div class="gimg"><img src="gallery/junior-ohm-3.jpg" alt="欧姆定律知识图谱"><span>欧姆定律 · 初中</span></div>
+      <div class="gimg"><img src="gallery/junior-pow-2.jpg" alt="电功率知识图谱"><span>电流做功 · 初中</span></div>
+      <div class="gimg"><img src="gallery/junior-house-1.jpg" alt="生活用电知识图谱"><span>生活用电 · 初中</span></div>
+      <div class="gimg"><img src="gallery/junior-cap.jpg" alt="比热容知识图谱"><span>比热容 · 初中</span></div>
+      <div class="gimg"><img src="gallery/junior-elec-2.png" alt="电学专题"><span>电学专题 · 初中</span></div>
+      <div class="gimg"><img src="gallery/junior-elec-5.png" alt="电学专题"><span>电学专题 · 初中</span></div>
+      <div class="gimg"><img src="gallery/senior-balance-1.jpg" alt="共点力平衡"><span>共点力平衡 · 高一</span></div>
+      <div class="gimg"><img src="gallery/senior-kinetic-1.png" alt="匀变速直线运动"><span>匀变速 · 高一</span></div>
+      <div class="gimg"><img src="gallery/senior-2-1.png" alt="必修二知识图谱"><span>曲线运动 · 高二</span></div>
+      <div class="gimg"><img src="gallery/senior-2-3.png" alt="必修二知识图谱"><span>必修二 · 高中</span></div>
+    </div>
+    <div class="track">共 74 张知识图谱覆盖初中电学 / 内能 / 高中必修一·二 · 讲义均彩色图文并茂</div>
+  </section>
+
+  <section data-page-node-id="cuotigj-sec">
+    <div class="sec-title"><span class="dot"></span>自研 · 错题管家<small>一对一之外的个性化服务</small></div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:6px;line-height:1.7;">孩子错题拍照提交，系统自动标知识点 / 错因，一键生成 AI 解析，并可勾选自动出"变式练习卷"打印重练——机构大班给不了的个性化闭环。</p>
+    <div class="toolflow">
+      <div class="tf"><b>① 拍照提交</b><span>家长 / 孩子拍下错题</span></div>
+      <div class="arr">→</div>
+      <div class="tf"><b>② AI 解析</b><span>标知识点 · 错因 · 解法</span></div>
+      <div class="arr">→</div>
+      <div class="tf"><b>③ 变式卷</b><span>勾选自动出同类题</span></div>
+    </div>
+    <div class="track">错题管家为学员专享工具，随课程赠送 · 详情加微信了解</div>
+  </section>
   <section class="wb-intro" data-page-node-id="M8Hy2KOjlDX9krqZH4JrOw">
     <h3 style="margin:0 0 4px;font-size:21px;font-weight:800;color:var(--c1);" data-page-node-id="egBnA8D2B4K4wXL7HBHAjh">📚 学习工作台</h3>
     <div style="font-size:13px;color:var(--muted);margin-bottom:6px;" data-page-node-id="xVhju0ELKW3HbiIUQb1oqW">可定制暑假提升工具</div>

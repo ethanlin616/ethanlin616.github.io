@@ -126,3 +126,36 @@ details .a{padding:0 16px 14px;font-size:12.5px;color:var(--ink2)}
   .creds{grid-template-columns:1fr}
   .cross{grid-template-columns:1fr}
 }
+
+/* 优化：真实案例卡 / 方法样例 / 讲义实拍（2026-10-29） */
+.case-real{background:var(--soft);border-radius:12px;padding:16px;margin-bottom:14px}
+.case-real .cmeta{font-size:12.5px;color:var(--ink2);margin:6px 0 10px;line-height:1.6}
+.case-real .cmeta b.lo{color:#E04646;font-size:15px}
+.case-real .cmeta b.up{color:#E2561B;font-size:15px}
+.cblock{font-size:12.5px;line-height:1.7;margin-bottom:9px;color:var(--ink2)}
+.cblock .ct{display:inline-block;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--c2),var(--c3));font-size:11px;padding:2px 8px;border-radius:999px;margin-right:7px;vertical-align:1px}
+.cblock b{color:var(--c1)}
+.ms-item{background:var(--soft);border-left:3px solid var(--c2);border-radius:8px;padding:12px 14px;margin-bottom:9px}
+.ms-item .h{font-size:14px;font-weight:800;color:var(--c1);margin-bottom:3px}
+.ms-item .d{font-size:12.5px;color:var(--ink2);line-height:1.65}
+.gallery-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.gallery-mini img{width:100%;border-radius:10px;border:1px solid var(--line);aspect-ratio:3/4;object-fit:cover}
+.sympy-card{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:12px;padding:14px 16px;font-size:12.5px;color:var(--ink2);line-height:1.7}
+.sympy-card b{color:var(--c1)}
+.sympy-card .big{font-size:22px;font-weight:900;color:#0B4E9E;margin-right:2px}
+@media(max-width:400px){ .gallery-mini{grid-template-columns:repeat(2,1fr)} }
+
+/* ===== 一道题，看我怎么教（v2） ===== */
+.demo{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:0 2px 12px rgba(30,58,138,.05)}
+.demo .dtag{display:inline-block;font-size:11px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--c2),var(--c3));padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.demo .q{font-size:13.5px;font-weight:700;line-height:1.7;padding:11px 13px;background:var(--soft);border-radius:10px;border-left:3px solid var(--c2)}
+.demo .wrong{margin-top:10px;font-size:12.5px;line-height:1.7;color:#B42318;background:#FEF3F2;border:1px solid #FECDCA;border-radius:10px;padding:10px 13px}
+.demo .wrong b{color:#912018}
+.demo ol{margin-top:10px;counter-reset:d;list-style:none}
+.demo ol li{position:relative;padding-left:24px;font-size:12.5px;line-height:1.7;margin-bottom:6px}
+.demo ol li:last-child{margin-bottom:0}
+.demo ol li::before{counter-increment:d;content:counter(d);position:absolute;left:0;top:2px;width:17px;height:17px;border-radius:50%;background:rgba(37,99,235,.12);color:var(--c2);font-size:10.5px;font-weight:800;text-align:center;line-height:17px}
+.demo ol li b{color:var(--c2)}
+.demo .key{margin-top:11px;font-size:13px;font-weight:800;color:#7C2D12;background:linear-gradient(135deg,#FFF7ED,#FFEDD5);border:1px solid #FED7AA;border-radius:10px;padding:10px 13px;line-height:1.6}
+.demo .key::before{content:"口诀 · ";font-size:10.5px;color:#B45309;letter-spacing:1px}
+.demo .src{margin-top:8px;font-size:11px;color:var(--ink3);line-height:1.6}

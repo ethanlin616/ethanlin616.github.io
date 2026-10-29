@@ -143,6 +143,39 @@ details .a{padding:0 16px 14px;font-size:12.5px;color:var(--ink2)}
   .creds{grid-template-columns:1fr}
   .cross{grid-template-columns:1fr}
 }
+
+/* 优化：真实案例卡 / 方法样例 / 讲义实拍（2026-10-29） */
+.case-real{background:var(--soft);border-radius:12px;padding:16px;margin-bottom:14px}
+.case-real .cmeta{font-size:12.5px;color:var(--ink2);margin:6px 0 10px;line-height:1.6}
+.case-real .cmeta b.lo{color:#E04646;font-size:15px}
+.case-real .cmeta b.up{color:#E2561B;font-size:15px}
+.cblock{font-size:12.5px;line-height:1.7;margin-bottom:9px;color:var(--ink2)}
+.cblock .ct{display:inline-block;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--c2),var(--c3));font-size:11px;padding:2px 8px;border-radius:999px;margin-right:7px;vertical-align:1px}
+.cblock b{color:var(--c1)}
+.ms-item{background:var(--soft);border-left:3px solid var(--c2);border-radius:8px;padding:12px 14px;margin-bottom:9px}
+.ms-item .h{font-size:14px;font-weight:800;color:var(--c1);margin-bottom:3px}
+.ms-item .d{font-size:12.5px;color:var(--ink2);line-height:1.65}
+.gallery-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.gallery-mini img{width:100%;border-radius:10px;border:1px solid var(--line);aspect-ratio:3/4;object-fit:cover}
+.sympy-card{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:12px;padding:14px 16px;font-size:12.5px;color:var(--ink2);line-height:1.7}
+.sympy-card b{color:var(--c1)}
+.sympy-card .big{font-size:22px;font-weight:900;color:#0B4E9E;margin-right:2px}
+@media(max-width:400px){ .gallery-mini{grid-template-columns:repeat(2,1fr)} }
+
+/* ===== 一道题，看我怎么教（v2） ===== */
+.demo{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:0 2px 12px rgba(30,58,138,.05)}
+.demo .dtag{display:inline-block;font-size:11px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--c2),var(--c3));padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.demo .q{font-size:13.5px;font-weight:700;line-height:1.7;padding:11px 13px;background:var(--soft);border-radius:10px;border-left:3px solid var(--c2)}
+.demo .wrong{margin-top:10px;font-size:12.5px;line-height:1.7;color:#B42318;background:#FEF3F2;border:1px solid #FECDCA;border-radius:10px;padding:10px 13px}
+.demo .wrong b{color:#912018}
+.demo ol{margin-top:10px;counter-reset:d;list-style:none}
+.demo ol li{position:relative;padding-left:24px;font-size:12.5px;line-height:1.7;margin-bottom:6px}
+.demo ol li:last-child{margin-bottom:0}
+.demo ol li::before{counter-increment:d;content:counter(d);position:absolute;left:0;top:2px;width:17px;height:17px;border-radius:50%;background:rgba(37,99,235,.12);color:var(--c2);font-size:10.5px;font-weight:800;text-align:center;line-height:17px}
+.demo ol li b{color:var(--c2)}
+.demo .key{margin-top:11px;font-size:13px;font-weight:800;color:#7C2D12;background:linear-gradient(135deg,#FFF7ED,#FFEDD5);border:1px solid #FED7AA;border-radius:10px;padding:10px 13px;line-height:1.6}
+.demo .key::before{content:"口诀 · ";font-size:10.5px;color:#B45309;letter-spacing:1px}
+.demo .src{margin-top:8px;font-size:11px;color:var(--ink3);line-height:1.6}
 </style>
 </head>
 <body>
@@ -181,12 +214,27 @@ details .a{padding:0 16px 14px;font-size:12.5px;color:var(--ink2)}
   </div>
 
   <div class="sec">
+    <div class="sec-title">🔍 一道题，看我怎么教</div>
+    <div class="sec-sub">先看学生怎么错，再看我怎么判——差别就在这几步</div>
+    <div class="demo"><span class="dtag">小学六年级 · 单位「1」</span><div class="q">一本书 120 页，读了 1/4，还剩多少页？</div><div class="wrong"><b>多数学生会这样错：</b>120 × 1/4 = 30，答「还剩 30 页」。算得没错，但答的是「读了多少」。</div><ol><li>圈出分率句：1/4</li><li>「的」字前面是单位「1」→ 全书 120 页</li><li>写关系式：剩下 = 120 × (1 − 1/4) = <b>90 页</b></li><li>回代检验：读的 30 + 剩的 90 = 120 ✓</li></ol><div class="key">「的」前「比」后找标准；先写关系式，再算不迷糊</div><div class="src">出处：六年级第 1 课《单位 1 与应用题拆解》四步卡</div></div>
+<div class="demo"><span class="dtag">初三 · 一元二次方程</span><div class="q">解方程 x² − 5x + 6 = 0。</div><div class="wrong"><b>多数学生会这样错：</b>上来就套求根公式：算判别式、开根号、化简，六分钟过去，还可能算错。</div><ol><li>先问：能不能十字相乘？找两个数，和 = −5、积 = 6 → −2 和 −3</li><li>分解成 (x−2)(x−3) = 0 → <b>x = 2 或 x = 3</b></li><li>只有分解不出来，才动求根公式；配方法放在最后</li></ol><div class="key">先分解，再配方，最后才套公式</div><div class="src">出处：初三数学第 7 课《一元二次方程解法选择》备课计划</div></div>
+  </div>
+
+  <div class="sec">
     <div class="sec-title">🧩 我怎么教</div>
     <div class="sec-sub">不是多讲几道题，是给一套能复用的方法</div>
     <div class="method"><div class="t">1. 先画图，再列式</div><div class="d">几何题先画“拆分路线图”，把大图拆成认识的三角形、四边形；函数题先画图象再写式，用数形结合代替硬算。</div></div>
 <div class="method"><div class="t">2. 题型建模</div><div class="d">把全等模型、动点问题、二次函数最值、应用题四类关系归纳成固定解法，见到题先认模型再下笔。</div></div>
 <div class="method"><div class="t">3. 按评分标准写过程</div><div class="d">照中考阅卷的踩分点写：条件写全、结论回扣、单位带齐，会做的题一分不丢。</div></div>
 <div class="method"><div class="t">4. 错题回炉</div><div class="d">错题归档并标注是概念错、方法错还是计算错，一周后重做一遍，不让它第二次错。</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">🧭 方法样例 · 决策树</div>
+    <div class="sec-sub">上面那道题只是其中一条，这些是我课上真用的判定顺序</div>
+    <div class="ms-item"><div class="h">单位 1 拆解</div><div class="d">分数 / 百分数应用题，先定单位「1」，再判「多 / 少几分之几」，最后列关系式——不靠套公式。</div></div>
+<div class="ms-item"><div class="h">几何辅助线</div><div class="d">从大图拆小图形、从结论反推需证关系；对称 / 平移 / 旋转三类优先试。</div></div>
+<div class="ms-item"><div class="h">函数数形结合</div><div class="d">拿到函数先画草图（开口方向、交点、对称轴），再代点列式，避免硬算。</div></div>
   </div>
 
   <div class="sec">
@@ -206,14 +254,20 @@ details .a{padding:0 16px 14px;font-size:12.5px;color:var(--ink2)}
 <tr><td><div class="nm">初中数学 · 一对一</div><div class="ds">同步提升 · 中考冲刺</div></td><td style="color:#8A929E;font-size:12.5px">一对一</td><td class="pr">250 元<small>/课时</small></td></tr>
 <tr><td><div class="nm">初中数学 · 小班</div><div class="ds">3-5 人精品小班</div></td><td style="color:#8A929E;font-size:12.5px">小班</td><td class="pr">160 元<small>/人/课时</small></td></tr></table>
     <div class="trialbox"><div class="lb">首次试听享半价（一对一）<em>一节完整正课，满意再正式报名</em></div><div class="vals"><div class="v"><b>90</b><i>小学</i></div><div class="v"><b>125</b><i>初中</i></div></div></div>
-    <div class="note">1 课时 = 60 分钟；首次试听享半价（一对一），满意再正式报名。上课形式：一对一 / 小班（3-5 人）；线上为主，通州临河里及周边可线下。</div>
+    <div class="note">1 课时 = 60 分钟；首次试听享半价（一对一），满意再正式报名。上课形式：一对一 / 小班（3-5 人）；线上为主，通州及周边可线下。</div>
   </div>
 
   <div class="sec">
     <div class="sec-title">📈 数学提分案例</div>
-    <div class="sec-sub">真实学员，数据来自期中/期末与中考成绩</div>
-    <div class="case"><div class="g">初二数学（几何 / 函数）</div><div class="p">几何没思路、函数图像看不懂，大题拿不到分，期中不及格</div><div class="nums"><div><div class="k">辅导前</div><div class="v">60 分左右</div></div><div><div class="k">现在</div><div class="v up">85+ 分</div></div></div><div class="r">从几何辅助线思路与函数数形结合入手，一学期期末稳定 85+ 分。</div></div>
-<div class="case"><div class="g">小学五年级数学</div><div class="p">计算粗心、应用题读不懂，对数学有畏难情绪，成绩中等偏下</div><div class="nums"><div><div class="k">辅导前</div><div class="v">70 分左右</div></div><div><div class="k">现在</div><div class="v up">92+ 分</div></div></div><div class="r">从计算习惯和读题方法入手，半年内期末稳定 90+ 分，孩子不再怕数学。</div></div>
+    <div class="sec-sub">真实诊断记录，姓名与地区已脱敏</div>
+    <div class="case case-real"><div class="g">六年级数学 · 宇同学</div><div class="cmeta">应用题「单位 1」理解不到位，拆题写关系式习惯没形成；计算能力强、基础扎实。</div><div class="cblock"><span class="ct">诊断</span>单位「1」抽象、不会把文字转成数量关系式，应用题一遇变化就卡。</div><div class="cblock"><span class="ct">动作</span>8 课搭建「单位 1 拆解」体系，每课配备课计划 + 学生练习 + 四步卡 + 答案解析 + 动画。</div><div class="cblock"><span class="ct">产物</span>五件套闭环材料，应用题从「抽象不会」到「会拆关系式」。</div></div>
+<div class="case case-real"><div class="g">初三数学 · 琪同学</div><div class="cmeta">几何没思路、函数图像看不懂，大题拿不到分；试课反馈「听得懂、练不熟」。</div><div class="cblock"><span class="ct">诊断</span>几何辅助线不会拆、函数数形结合弱，综合题易丢步。</div><div class="cblock"><span class="ct">动作</span>几何先画「拆分路线图」；函数先想图像再列式；每课微信反馈盯熟练度。</div><div class="cblock"><span class="ct">配套</span>概念对比卡 + 同类变式卷。</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title">📐 讲义实拍与质量背书</div>
+    <div class="sec-sub">下面是我上课用的数学讲义样例（小学应用题五件套 + 初中几何 / 函数）。</div>
+    <div class="sympy-card"><span class="big">0</span>处算术错误 · 每份讲义用 sympy 独立重算，抽验 18 题（5 题算式自动复核通过）</div>
   </div>
 
   <div class="sec">
