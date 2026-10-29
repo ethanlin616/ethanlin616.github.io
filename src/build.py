@@ -153,7 +153,7 @@ def render_evidence(evi):
         return ""
     parts = []
     for g in evi.get("gallery", []):
-        parts.append(f'<img src="{esc(g)}" alt="讲义图谱">')
+        parts.append(f'<img src="{esc(g)}" alt="讲义图谱" loading="lazy" decoding="async">')
     if parts:
         parts = ['<div class="gallery-mini">'] + parts + ['</div>']
     return "\n".join(parts)
