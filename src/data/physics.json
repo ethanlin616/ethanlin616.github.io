@@ -249,14 +249,10 @@
     "gallery": [
       "junior-ohm-1.jpg",
       "junior-pow-2.jpg",
-      "junior-elec-2.png",
+      "junior-elec-2.jpg",
       "junior-cap.jpg",
       "senior-balance-1.jpg",
-      "senior-kinetic-1.png"
-    ],
-    "sympy": {
-      "num": "0",
-      "text": "处算术错误 · 每份讲义用 sympy 独立重算，抽验 18 题（5 题算式自动复核通过）"
-    }
+      "senior-kinetic-1.jpg"
+    ]
   }
 }
