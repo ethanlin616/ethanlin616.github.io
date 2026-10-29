@@ -178,11 +178,16 @@ def render_faq(faq):
     return "\n".join(out)
 
 
+def rel(path):
+    """站点内路径一律用相对写法：上线在根目录时等价，本地双击 html 也能点开。"""
+    return "../" + path.lstrip("/")
+
+
 def render_subjnav(cur):
-    items = ['<a href="/">主页</a>']
+    items = ['<a href="../">主页</a>']
     for s in SITE["sites"]:
         on = " on" if s["key"] == cur else ""
-        items.append(f'<a class="{on.strip()}" href="{s["path"]}">{s["name"]}</a>')
+        items.append(f'<a class="{on.strip()}" href="{rel(s["path"])}">{s["name"]}</a>')
     return "\n".join(items)
 
 
@@ -191,7 +196,7 @@ def render_cross(cur):
     for s in SITE["sites"]:
         if s["key"] == cur:
             continue
-        out.append(f'<a href="{s["path"]}"><b>{s["name"]}</b><i>{esc(s["desc"])}</i></a>')
+        out.append(f'<a href="{rel(s["path"])}"><b>{s["name"]}</b><i>{esc(s["desc"])}</i></a>')
     return "\n".join(out)
 
 
