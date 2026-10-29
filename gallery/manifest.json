@@ -2,7 +2,7 @@
   "note": "招生站讲义图谱清单。pick=true 的图会出现在主页「讲义与知识图谱」区块，按 order 排序。新增图片：把文件放进 gallery/，在 items 里加一条，跑 python3 src/build_gallery.py",
   "items": [
     {
-      "file": "senior-kinetic-1.png",
+      "file": "senior-kinetic-1.jpg",
       "title": "匀变速直线运动",
       "stage": "高一",
       "topic": "运动学",
@@ -20,7 +20,7 @@
       "why": "受力分析是一切力学的地基；四宫格布局，每格一个判断动作"
     },
     {
-      "file": "junior-elec-5.png",
+      "file": "junior-elec-5.jpg",
       "title": "电学题型与易错点",
       "stage": "初中",
       "topic": "电学",
@@ -56,7 +56,7 @@
       "why": "热学唯一高失分点，也是琪同学月考单题 −5 的地方；配色与其他不同但排版优秀"
     },
     {
-      "file": "junior-elec-2.png",
+      "file": "junior-elec-2.jpg",
       "title": "电路连接与电表",
       "stage": "初中",
       "topic": "电学",
@@ -65,7 +65,7 @@
       "why": "实物图 + 电路图对照，缩略图辨识度最高，一眼看出是「真讲义」"
     },
     {
-      "file": "senior-2-3.png",
+      "file": "senior-2-3.jpg",
       "title": "必修二 · 公式整理",
       "stage": "高中",
       "topic": "曲线运动 / 功能",
